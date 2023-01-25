@@ -95,6 +95,14 @@ fun generateMath(output: OutputStream, type: MathType) {
                     body { "return this.${component(it)}" }
                 }
             }
+
+            (compatibleTypes + listOf(type)).forEach {
+                method {
+                    kdoc { "Returns the dot product of a [$type] and a [${it.path}]" }
+                    name = "dot"
+                    returnType = type.backingType.display
+                }
+            }
         }
 
         if (compatibleTypes.isNotEmpty()) {
@@ -102,7 +110,7 @@ fun generateMath(output: OutputStream, type: MathType) {
                 compatibleTypes.forEach { otherType ->
                     method {
                         kdoc { "Converts a [$type] to a [${otherType.path}]." }
-                        name = "to$otherType"
+                        name = if (otherType.hasUniqueName(compatibleTypes)) "to$otherType" else "to${otherType.uniqueName.replace('$', '_')}"
                         returnType = otherType.path
                         body {
                             buildString {

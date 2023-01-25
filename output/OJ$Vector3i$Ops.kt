@@ -157,6 +157,27 @@ public operator fun Vector3i.component2(): Int {
 public operator fun Vector3i.component3(): Int {
     return this.z
 }
+
+/**
+ * Returns the dot product of a [Vector3i] and a [net.minecraft.util.math.Vec3i]
+ */
+public fun Vector3i.dot(): Int {
+    
+}
+
+/**
+ * Returns the dot product of a [Vector3i] and a [net.minecraft.util.math.BlockPos]
+ */
+public fun Vector3i.dot(): Int {
+    
+}
+
+/**
+ * Returns the dot product of a [Vector3i] and a [org.joml.Vector3i]
+ */
+public fun Vector3i.dot(): Int {
+    
+}
 //endregion
 
 //region Conversion methods

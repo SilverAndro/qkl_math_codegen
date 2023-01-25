@@ -157,6 +157,27 @@ public operator fun BlockPos.component2(): Int {
 public operator fun BlockPos.component3(): Int {
     return this.z
 }
+
+/**
+ * Returns the dot product of a [BlockPos] and a [org.joml.Vector3i]
+ */
+public fun BlockPos.dot(): Int {
+    
+}
+
+/**
+ * Returns the dot product of a [BlockPos] and a [net.minecraft.util.math.Vec3i]
+ */
+public fun BlockPos.dot(): Int {
+    
+}
+
+/**
+ * Returns the dot product of a [BlockPos] and a [net.minecraft.util.math.BlockPos]
+ */
+public fun BlockPos.dot(): Int {
+    
+}
 //endregion
 
 //region Conversion methods

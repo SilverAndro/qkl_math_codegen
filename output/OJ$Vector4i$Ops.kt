@@ -97,4 +97,11 @@ public operator fun Vector4i.component3(): Int {
 public operator fun Vector4i.component4(): Int {
     return this.w
 }
+
+/**
+ * Returns the dot product of a [Vector4i] and a [org.joml.Vector4i]
+ */
+public fun Vector4i.dot(): Int {
+    
+}
 //endregion

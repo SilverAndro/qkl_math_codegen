@@ -85,4 +85,11 @@ public operator fun Vector3f.component2(): Float {
 public operator fun Vector3f.component3(): Float {
     return this.z
 }
+
+/**
+ * Returns the dot product of a [Vector3f] and a [org.joml.Vector3f]
+ */
+public fun Vector3f.dot(): Float {
+    
+}
 //endregion

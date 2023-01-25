@@ -139,6 +139,27 @@ public operator fun Vector2f.component1(): Float {
 public operator fun Vector2f.component2(): Float {
     return this.y
 }
+
+/**
+ * Returns the dot product of a [Vector2f] and a [net.minecraft.util.math.Vec2f]
+ */
+public fun Vector2f.dot(): Float {
+    
+}
+
+/**
+ * Returns the dot product of a [Vector2f] and a [net.minecraft.client.util.math.Vector2f]
+ */
+public fun Vector2f.dot(): Float {
+    
+}
+
+/**
+ * Returns the dot product of a [Vector2f] and a [org.joml.Vector2f]
+ */
+public fun Vector2f.dot(): Float {
+    
+}
 //endregion
 
 //region Conversion methods

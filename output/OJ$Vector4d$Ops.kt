@@ -97,4 +97,11 @@ public operator fun Vector4d.component3(): Double {
 public operator fun Vector4d.component4(): Double {
     return this.w
 }
+
+/**
+ * Returns the dot product of a [Vector4d] and a [org.joml.Vector4d]
+ */
+public fun Vector4d.dot(): Double {
+    
+}
 //endregion

@@ -73,4 +73,11 @@ public operator fun Vector2i.component1(): Int {
 public operator fun Vector2i.component2(): Int {
     return this.y
 }
+
+/**
+ * Returns the dot product of a [Vector2i] and a [org.joml.Vector2i]
+ */
+public fun Vector2i.dot(): Int {
+    
+}
 //endregion

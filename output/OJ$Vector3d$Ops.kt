@@ -122,6 +122,20 @@ public operator fun Vector3d.component2(): Double {
 public operator fun Vector3d.component3(): Double {
     return this.z
 }
+
+/**
+ * Returns the dot product of a [Vector3d] and a [net.minecraft.util.math.Vec3d]
+ */
+public fun Vector3d.dot(): Double {
+    
+}
+
+/**
+ * Returns the dot product of a [Vector3d] and a [org.joml.Vector3d]
+ */
+public fun Vector3d.dot(): Double {
+    
+}
 //endregion
 
 //region Conversion methods

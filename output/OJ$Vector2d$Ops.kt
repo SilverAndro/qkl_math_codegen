@@ -73,4 +73,11 @@ public operator fun Vector2d.component1(): Double {
 public operator fun Vector2d.component2(): Double {
     return this.y
 }
+
+/**
+ * Returns the dot product of a [Vector2d] and a [org.joml.Vector2d]
+ */
+public fun Vector2d.dot(): Double {
+    
+}
 //endregion

@@ -97,4 +97,11 @@ public operator fun Vector4f.component3(): Float {
 public operator fun Vector4f.component4(): Float {
     return this.w
 }
+
+/**
+ * Returns the dot product of a [Vector4f] and a [org.joml.Vector4f]
+ */
+public fun Vector4f.dot(): Float {
+    
+}
 //endregion
