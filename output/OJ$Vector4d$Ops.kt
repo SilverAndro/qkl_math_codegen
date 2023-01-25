@@ -33,6 +33,7 @@ public operator fun Vector4d.minus(other: Vector4d): Vector4d {
 
 /**
  * Multiplies a [Vector4d] and a [Vector4d].
+ * This method is a shorthand for component wise multiplication.
  */
 public operator fun Vector4d.times(other: Vector4d): Vector4d {
     return Vector4d(
@@ -68,3 +69,4 @@ public operator fun Vector4d.unaryMinus(): Vector4d {
 }
 
 //endregion
+

@@ -26,11 +26,7 @@ class MathTypeMethod : MathTypeSection {
     data class Param(val name: String, val type: String)
 
     override fun write(baseType: String): String {
-        val totalComment = if (comment == null) "" else """
-            /**
-            ${comment!!.split("\n").map { " * $it" }.joinToString(separator = "\n", prefix = "", postfix = "")}
-             */${'\n'}
-        """.trimIndent()
+        val totalComment = if (comment == null) "" else "/**\n${comment!!.split("\n").map { " * $it" }.joinToString(separator = "\n", prefix = "", postfix = "")}\n */\n"
 
         val declaration =
             "public ${if (isOperator) "operator " else ""}fun $baseType.$name(${params.joinToString(separator = ", ") { "${it.name}: ${it.type}" }})${if (returnType != null) ": $returnType" else ""} {\n"

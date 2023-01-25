@@ -8,6 +8,6 @@ class StartSection(val sectionName: String) : MathTypeSection {
 
 class EndSection() : MathTypeSection {
     override fun write(baseType: String): String {
-        return "//endregion"
+        return "//endregion\n"
     }
 }

@@ -31,6 +31,7 @@ public operator fun Vec3d.minus(other: Vec3d): Vec3d {
 
 /**
  * Multiplies a [Vec3d] and a [Vec3d].
+ * This method is a shorthand for component wise multiplication.
  */
 public operator fun Vec3d.times(other: Vec3d): Vec3d {
     return Vec3d(
@@ -63,3 +64,52 @@ public operator fun Vec3d.unaryMinus(): Vec3d {
 }
 
 //endregion
+
+//region Type compatibility operator variations
+/**
+ * Adds a [org.joml.Vector3d] to a [net.minecraft.util.math.Vec3d].
+ */
+public operator fun Vec3d.plus(other: Vector3d): Vec3d {
+    return Vec3d(
+        this.x + other.x,
+        this.y + other.y,
+        this.z + other.z
+    )
+}
+
+/**
+ * Subtracts a [org.joml.Vector3d] from a [net.minecraft.util.math.Vec3d].
+ */
+public operator fun Vec3d.minus(other: Vec3d): Vec3d {
+    return Vec3d(
+        this.x - other.x,
+        this.y - other.y,
+        this.z - other.z
+    )
+}
+
+/**
+ * Multiplies a [org.joml.Vector3d] and a [net.minecraft.util.math.Vec3d].
+ * This method is a shorthand for component wise multiplication.
+ */
+public operator fun Vec3d.times(other: Vec3d): Vec3d {
+    return Vec3d(
+        this.x * other.x,
+        this.y * other.y,
+        this.z * other.z
+    )
+}
+
+/**
+ * Divides a [org.joml.Vector3d] and a [net.minecraft.util.math.Vec3d].
+ */
+public operator fun Vec3d.div(other: Vec3d): Vec3d {
+    return Vec3d(
+        this.x / other.x,
+        this.y / other.y,
+        this.z / other.z
+    )
+}
+
+//endregion
+

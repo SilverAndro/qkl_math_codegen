@@ -31,6 +31,7 @@ public operator fun Vector3f.minus(other: Vector3f): Vector3f {
 
 /**
  * Multiplies a [Vector3f] and a [Vector3f].
+ * This method is a shorthand for component wise multiplication.
  */
 public operator fun Vector3f.times(other: Vector3f): Vector3f {
     return Vector3f(
@@ -63,3 +64,4 @@ public operator fun Vector3f.unaryMinus(): Vector3f {
 }
 
 //endregion
+

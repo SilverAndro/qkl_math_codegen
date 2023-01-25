@@ -29,6 +29,7 @@ public operator fun Vec2f.minus(other: Vec2f): Vec2f {
 
 /**
  * Multiplies a [Vec2f] and a [Vec2f].
+ * This method is a shorthand for component wise multiplication.
  */
 public operator fun Vec2f.times(other: Vec2f): Vec2f {
     return Vec2f(
@@ -58,3 +59,89 @@ public operator fun Vec2f.unaryMinus(): Vec2f {
 }
 
 //endregion
+
+//region Type compatibility operator variations
+/**
+ * Adds a [org.joml.Vector2f] to a [net.minecraft.util.math.Vec2f].
+ */
+public operator fun Vec2f.plus(other: Vector2f): Vec2f {
+    return Vec2f(
+        this.x + other.x,
+        this.y + other.y
+    )
+}
+
+/**
+ * Subtracts a [org.joml.Vector2f] from a [net.minecraft.util.math.Vec2f].
+ */
+public operator fun Vec2f.minus(other: Vec2f): Vec2f {
+    return Vec2f(
+        this.x - other.x,
+        this.y - other.y
+    )
+}
+
+/**
+ * Multiplies a [org.joml.Vector2f] and a [net.minecraft.util.math.Vec2f].
+ * This method is a shorthand for component wise multiplication.
+ */
+public operator fun Vec2f.times(other: Vec2f): Vec2f {
+    return Vec2f(
+        this.x * other.x,
+        this.y * other.y
+    )
+}
+
+/**
+ * Divides a [org.joml.Vector2f] and a [net.minecraft.util.math.Vec2f].
+ */
+public operator fun Vec2f.div(other: Vec2f): Vec2f {
+    return Vec2f(
+        this.x / other.x,
+        this.y / other.y
+    )
+}
+
+/**
+ * Adds a [net.minecraft.client.util.math.Vector2f] to a [net.minecraft.util.math.Vec2f].
+ */
+public operator fun Vec2f.plus(other: Vector2f): Vec2f {
+    return Vec2f(
+        this.x + other.x,
+        this.y + other.y
+    )
+}
+
+/**
+ * Subtracts a [net.minecraft.client.util.math.Vector2f] from a [net.minecraft.util.math.Vec2f].
+ */
+public operator fun Vec2f.minus(other: Vec2f): Vec2f {
+    return Vec2f(
+        this.x - other.x,
+        this.y - other.y
+    )
+}
+
+/**
+ * Multiplies a [net.minecraft.client.util.math.Vector2f] and a [net.minecraft.util.math.Vec2f].
+ * This method is a shorthand for component wise multiplication.
+ */
+public operator fun Vec2f.times(other: Vec2f): Vec2f {
+    return Vec2f(
+        this.x * other.x,
+        this.y * other.y
+    )
+}
+
+/**
+ * Divides a [net.minecraft.client.util.math.Vector2f] and a [net.minecraft.util.math.Vec2f].
+ */
+public operator fun Vec2f.div(other: Vec2f): Vec2f {
+    return Vec2f(
+        this.x / other.x,
+        this.y / other.y
+    )
+}
+
+//endregion
+

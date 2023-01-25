@@ -31,6 +31,7 @@ public operator fun BlockPos.minus(other: BlockPos): BlockPos {
 
 /**
  * Multiplies a [BlockPos] and a [BlockPos].
+ * This method is a shorthand for component wise multiplication.
  */
 public operator fun BlockPos.times(other: BlockPos): BlockPos {
     return BlockPos(
@@ -63,3 +64,97 @@ public operator fun BlockPos.unaryMinus(): BlockPos {
 }
 
 //endregion
+
+//region Type compatibility operator variations
+/**
+ * Adds a [org.joml.Vector3i] to a [net.minecraft.util.math.BlockPos].
+ */
+public operator fun BlockPos.plus(other: Vector3i): BlockPos {
+    return BlockPos(
+        this.x + other.x,
+        this.y + other.y,
+        this.z + other.z
+    )
+}
+
+/**
+ * Subtracts a [org.joml.Vector3i] from a [net.minecraft.util.math.BlockPos].
+ */
+public operator fun BlockPos.minus(other: BlockPos): BlockPos {
+    return BlockPos(
+        this.x - other.x,
+        this.y - other.y,
+        this.z - other.z
+    )
+}
+
+/**
+ * Multiplies a [org.joml.Vector3i] and a [net.minecraft.util.math.BlockPos].
+ * This method is a shorthand for component wise multiplication.
+ */
+public operator fun BlockPos.times(other: BlockPos): BlockPos {
+    return BlockPos(
+        this.x * other.x,
+        this.y * other.y,
+        this.z * other.z
+    )
+}
+
+/**
+ * Divides a [org.joml.Vector3i] and a [net.minecraft.util.math.BlockPos].
+ */
+public operator fun BlockPos.div(other: BlockPos): BlockPos {
+    return BlockPos(
+        this.x / other.x,
+        this.y / other.y,
+        this.z / other.z
+    )
+}
+
+/**
+ * Adds a [net.minecraft.util.math.Vec3i] to a [net.minecraft.util.math.BlockPos].
+ */
+public operator fun BlockPos.plus(other: Vec3i): BlockPos {
+    return BlockPos(
+        this.x + other.x,
+        this.y + other.y,
+        this.z + other.z
+    )
+}
+
+/**
+ * Subtracts a [net.minecraft.util.math.Vec3i] from a [net.minecraft.util.math.BlockPos].
+ */
+public operator fun BlockPos.minus(other: BlockPos): BlockPos {
+    return BlockPos(
+        this.x - other.x,
+        this.y - other.y,
+        this.z - other.z
+    )
+}
+
+/**
+ * Multiplies a [net.minecraft.util.math.Vec3i] and a [net.minecraft.util.math.BlockPos].
+ * This method is a shorthand for component wise multiplication.
+ */
+public operator fun BlockPos.times(other: BlockPos): BlockPos {
+    return BlockPos(
+        this.x * other.x,
+        this.y * other.y,
+        this.z * other.z
+    )
+}
+
+/**
+ * Divides a [net.minecraft.util.math.Vec3i] and a [net.minecraft.util.math.BlockPos].
+ */
+public operator fun BlockPos.div(other: BlockPos): BlockPos {
+    return BlockPos(
+        this.x / other.x,
+        this.y / other.y,
+        this.z / other.z
+    )
+}
+
+//endregion
+

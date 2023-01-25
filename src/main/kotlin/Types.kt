@@ -82,6 +82,6 @@ val types = buildList {
     ))
 }
 
-fun canOperateWith(typeA: MathType, typeB: MathType) {
-
+fun canOperateWith(typeA: MathType, typeB: MathType): Boolean {
+    return typeA != typeB && typeA.components == typeB.components && typeA.backingType == typeB.backingType
 }
