@@ -41,9 +41,11 @@ class MathTypeFile(val baseType: MathType, action: MathTypeFile.()->Unit) {
                 appendLine("import ${it.path}")
             }
             appendLine()
-            sections.forEach {
-                append(it.write(baseType.name))
-                appendLine()
+            sections.forEachIndexed { index, section ->
+                append(section.write(baseType.name))
+                if (index + 1 <= sections.lastIndex && sections[index + 1] !is EndSection) {
+                    appendLine()
+                }
             }
         }.toByteArray())
     }

@@ -100,7 +100,7 @@ fun generateMath(output: OutputStream, type: MathType) {
                     name = "component${it+1}"
                     isOperator = true
                     returnType = type.backingType.display
-                    body { "this.${component(it)}" }
+                    body { "return this.${component(it)}" }
                 }
             }
         }
@@ -131,14 +131,7 @@ fun generateNegate(type: MathType): String {
         appendLine("return $type(")
         repeat(type.components.count) {
             appendLine(
-                "    -this.${
-                    arrayOf(
-                        'x',
-                        'y',
-                        'z',
-                        'w'
-                    )[it]
-                }" + if (it != type.components.count - 1) "," else ""
+                "    -this.${component(it)}" + if (it != type.components.count - 1) "," else ""
             )
         }
         append(")")

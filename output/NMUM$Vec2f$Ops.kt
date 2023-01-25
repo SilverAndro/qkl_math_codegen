@@ -59,7 +59,6 @@ public operator fun Vec2f.unaryMinus(): Vec2f {
         -this.y
     )
 }
-
 //endregion
 
 //region Type compatibility operator variations
@@ -144,7 +143,6 @@ public operator fun Vec2f.div(other: Vec2f): Vec2f {
         this.y / other.y
     )
 }
-
 //endregion
 
 //region Vector specific operators
@@ -152,15 +150,13 @@ public operator fun Vec2f.div(other: Vec2f): Vec2f {
  * The [`x`][Vec2f.x] of a [Vec2f].
  */
 public operator fun Vec2f.component1(): Float {
-    this.x
+    return this.x
 }
 
 /**
  * The [`y`][Vec2f.y] of a [Vec2f].
  */
 public operator fun Vec2f.component2(): Float {
-    this.y
+    return this.y
 }
-
 //endregion
-

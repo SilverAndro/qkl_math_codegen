@@ -64,7 +64,6 @@ public operator fun Vec3i.unaryMinus(): Vec3i {
         -this.z
     )
 }
-
 //endregion
 
 //region Type compatibility operator variations
@@ -157,7 +156,6 @@ public operator fun Vec3i.div(other: Vec3i): Vec3i {
         this.z / other.z
     )
 }
-
 //endregion
 
 //region Vector specific operators
@@ -165,22 +163,20 @@ public operator fun Vec3i.div(other: Vec3i): Vec3i {
  * The [`x`][Vec3i.x] of a [Vec3i].
  */
 public operator fun Vec3i.component1(): Int {
-    this.x
+    return this.x
 }
 
 /**
  * The [`y`][Vec3i.y] of a [Vec3i].
  */
 public operator fun Vec3i.component2(): Int {
-    this.y
+    return this.y
 }
 
 /**
  * The [`z`][Vec3i.z] of a [Vec3i].
  */
 public operator fun Vec3i.component3(): Int {
-    this.z
+    return this.z
 }
-
 //endregion
-

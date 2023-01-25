@@ -57,7 +57,6 @@ public operator fun Vector2d.unaryMinus(): Vector2d {
         -this.y
     )
 }
-
 //endregion
 
 //region Vector specific operators
@@ -65,15 +64,13 @@ public operator fun Vector2d.unaryMinus(): Vector2d {
  * The [`x`][Vector2d.x] of a [Vector2d].
  */
 public operator fun Vector2d.component1(): Double {
-    this.x
+    return this.x
 }
 
 /**
  * The [`y`][Vector2d.y] of a [Vector2d].
  */
 public operator fun Vector2d.component2(): Double {
-    this.y
+    return this.y
 }
-
 //endregion
-

@@ -64,7 +64,6 @@ public operator fun BlockPos.unaryMinus(): BlockPos {
         -this.z
     )
 }
-
 //endregion
 
 //region Type compatibility operator variations
@@ -157,7 +156,6 @@ public operator fun BlockPos.div(other: BlockPos): BlockPos {
         this.z / other.z
     )
 }
-
 //endregion
 
 //region Vector specific operators
@@ -165,22 +163,20 @@ public operator fun BlockPos.div(other: BlockPos): BlockPos {
  * The [`x`][BlockPos.x] of a [BlockPos].
  */
 public operator fun BlockPos.component1(): Int {
-    this.x
+    return this.x
 }
 
 /**
  * The [`y`][BlockPos.y] of a [BlockPos].
  */
 public operator fun BlockPos.component2(): Int {
-    this.y
+    return this.y
 }
 
 /**
  * The [`z`][BlockPos.z] of a [BlockPos].
  */
 public operator fun BlockPos.component3(): Int {
-    this.z
+    return this.z
 }
-
 //endregion
-

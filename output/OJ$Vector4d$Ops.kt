@@ -67,7 +67,6 @@ public operator fun Vector4d.unaryMinus(): Vector4d {
         -this.w
     )
 }
-
 //endregion
 
 //region Vector specific operators
@@ -75,29 +74,27 @@ public operator fun Vector4d.unaryMinus(): Vector4d {
  * The [`x`][Vector4d.x] of a [Vector4d].
  */
 public operator fun Vector4d.component1(): Double {
-    this.x
+    return this.x
 }
 
 /**
  * The [`y`][Vector4d.y] of a [Vector4d].
  */
 public operator fun Vector4d.component2(): Double {
-    this.y
+    return this.y
 }
 
 /**
  * The [`z`][Vector4d.z] of a [Vector4d].
  */
 public operator fun Vector4d.component3(): Double {
-    this.z
+    return this.z
 }
 
 /**
  * The [`w`][Vector4d.w] of a [Vector4d].
  */
 public operator fun Vector4d.component4(): Double {
-    this.w
+    return this.w
 }
-
 //endregion
-
