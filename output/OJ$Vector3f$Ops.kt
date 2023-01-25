@@ -10,34 +10,54 @@ import org.joml.Vector3f
  * Adds a [Vector3f] to a [Vector3f].
  */
 public operator fun Vector3f.plus(other: Vector3f): Vector3f {
-    
+    return Vector3f(
+        this.x + other.x,
+        this.y + other.y,
+        this.z + other.z
+    )
 }
 
 /**
  * Subtracts a [Vector3f] from a [Vector3f].
  */
 public operator fun Vector3f.minus(other: Vector3f): Vector3f {
-    
+    return Vector3f(
+        this.x - other.x,
+        this.y - other.y,
+        this.z - other.z
+    )
 }
 
 /**
  * Multiplies a [Vector3f] and a [Vector3f].
  */
 public operator fun Vector3f.times(other: Vector3f): Vector3f {
-    
+    return Vector3f(
+        this.x * other.x,
+        this.y * other.y,
+        this.z * other.z
+    )
 }
 
 /**
  * Divides a [Vector3f] and a [Vector3f].
  */
 public operator fun Vector3f.div(other: Vector3f): Vector3f {
-    
+    return Vector3f(
+        this.x / other.x,
+        this.y / other.y,
+        this.z / other.z
+    )
 }
 
 /**
  * Negates a [Vector3f].
  */
 public operator fun Vector3f.unaryMinus(): Vector3f {
-    
+    return Vector3f(
+        -this.x,
+        -this.y,
+        -this.z
+    )
 }
 

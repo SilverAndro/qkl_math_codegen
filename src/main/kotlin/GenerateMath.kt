@@ -10,6 +10,7 @@ fun generateMath(output: OutputStream, type: MathType) {
             isOperator = true
             returnType = type
             param("other", type)
+            body { generateOp(type, '+') }
         }
 
         method {
@@ -18,6 +19,7 @@ fun generateMath(output: OutputStream, type: MathType) {
             isOperator = true
             returnType = type
             param("other", type)
+            body { generateOp(type, '-') }
         }
 
         method {
@@ -26,6 +28,7 @@ fun generateMath(output: OutputStream, type: MathType) {
             isOperator = true
             returnType = type
             param("other", type)
+            body { generateOp(type, '*') }
         }
 
         method {
@@ -34,6 +37,7 @@ fun generateMath(output: OutputStream, type: MathType) {
             isOperator = true
             returnType = type
             param("other", type)
+            body { generateOp(type, '/') }
         }
 
         method {
@@ -41,6 +45,29 @@ fun generateMath(output: OutputStream, type: MathType) {
             name = "unaryMinus"
             isOperator = true
             returnType = type
+            body { generateNegate(type) }
         }
     }.write(output)
+}
+
+fun generateOpLine(param: Char, operation: Char, hasComma: Boolean) = "this.$param $operation other.$param" + if (hasComma) "," else ""
+
+fun generateOp(type: MathType, operation: Char): String {
+    return buildString {
+        appendLine("return $type(")
+        repeat(type.components.count) {
+            appendLine("    " + generateOpLine(arrayOf('x', 'y', 'z', 'w')[it], operation, it != type.components.count - 1))
+        }
+        append(")")
+    }
+}
+
+fun generateNegate(type: MathType): String {
+    return buildString {
+        appendLine("return $type(")
+        repeat(type.components.count) {
+            appendLine("    -this.${arrayOf('x', 'y', 'z', 'w')[it]}" + if (it != type.components.count - 1) "," else "")
+        }
+        append(")")
+    }
 }

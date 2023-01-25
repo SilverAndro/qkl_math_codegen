@@ -10,34 +10,54 @@ import org.joml.Vector3d
  * Adds a [Vector3d] to a [Vector3d].
  */
 public operator fun Vector3d.plus(other: Vector3d): Vector3d {
-    
+    return Vector3d(
+        this.x + other.x,
+        this.y + other.y,
+        this.z + other.z
+    )
 }
 
 /**
  * Subtracts a [Vector3d] from a [Vector3d].
  */
 public operator fun Vector3d.minus(other: Vector3d): Vector3d {
-    
+    return Vector3d(
+        this.x - other.x,
+        this.y - other.y,
+        this.z - other.z
+    )
 }
 
 /**
  * Multiplies a [Vector3d] and a [Vector3d].
  */
 public operator fun Vector3d.times(other: Vector3d): Vector3d {
-    
+    return Vector3d(
+        this.x * other.x,
+        this.y * other.y,
+        this.z * other.z
+    )
 }
 
 /**
  * Divides a [Vector3d] and a [Vector3d].
  */
 public operator fun Vector3d.div(other: Vector3d): Vector3d {
-    
+    return Vector3d(
+        this.x / other.x,
+        this.y / other.y,
+        this.z / other.z
+    )
 }
 
 /**
  * Negates a [Vector3d].
  */
 public operator fun Vector3d.unaryMinus(): Vector3d {
-    
+    return Vector3d(
+        -this.x,
+        -this.y,
+        -this.z
+    )
 }
 

@@ -10,34 +10,54 @@ import net.minecraft.util.math.Vec3i
  * Adds a [Vec3i] to a [Vec3i].
  */
 public operator fun Vec3i.plus(other: Vec3i): Vec3i {
-    
+    return Vec3i(
+        this.x + other.x,
+        this.y + other.y,
+        this.z + other.z
+    )
 }
 
 /**
  * Subtracts a [Vec3i] from a [Vec3i].
  */
 public operator fun Vec3i.minus(other: Vec3i): Vec3i {
-    
+    return Vec3i(
+        this.x - other.x,
+        this.y - other.y,
+        this.z - other.z
+    )
 }
 
 /**
  * Multiplies a [Vec3i] and a [Vec3i].
  */
 public operator fun Vec3i.times(other: Vec3i): Vec3i {
-    
+    return Vec3i(
+        this.x * other.x,
+        this.y * other.y,
+        this.z * other.z
+    )
 }
 
 /**
  * Divides a [Vec3i] and a [Vec3i].
  */
 public operator fun Vec3i.div(other: Vec3i): Vec3i {
-    
+    return Vec3i(
+        this.x / other.x,
+        this.y / other.y,
+        this.z / other.z
+    )
 }
 
 /**
  * Negates a [Vec3i].
  */
 public operator fun Vec3i.unaryMinus(): Vec3i {
-    
+    return Vec3i(
+        -this.x,
+        -this.y,
+        -this.z
+    )
 }
 

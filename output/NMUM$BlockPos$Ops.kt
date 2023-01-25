@@ -10,34 +10,54 @@ import net.minecraft.util.math.BlockPos
  * Adds a [BlockPos] to a [BlockPos].
  */
 public operator fun BlockPos.plus(other: BlockPos): BlockPos {
-    
+    return BlockPos(
+        this.x + other.x,
+        this.y + other.y,
+        this.z + other.z
+    )
 }
 
 /**
  * Subtracts a [BlockPos] from a [BlockPos].
  */
 public operator fun BlockPos.minus(other: BlockPos): BlockPos {
-    
+    return BlockPos(
+        this.x - other.x,
+        this.y - other.y,
+        this.z - other.z
+    )
 }
 
 /**
  * Multiplies a [BlockPos] and a [BlockPos].
  */
 public operator fun BlockPos.times(other: BlockPos): BlockPos {
-    
+    return BlockPos(
+        this.x * other.x,
+        this.y * other.y,
+        this.z * other.z
+    )
 }
 
 /**
  * Divides a [BlockPos] and a [BlockPos].
  */
 public operator fun BlockPos.div(other: BlockPos): BlockPos {
-    
+    return BlockPos(
+        this.x / other.x,
+        this.y / other.y,
+        this.z / other.z
+    )
 }
 
 /**
  * Negates a [BlockPos].
  */
 public operator fun BlockPos.unaryMinus(): BlockPos {
-    
+    return BlockPos(
+        -this.x,
+        -this.y,
+        -this.z
+    )
 }
 

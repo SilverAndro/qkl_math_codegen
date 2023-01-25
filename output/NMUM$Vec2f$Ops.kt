@@ -10,34 +10,49 @@ import net.minecraft.util.math.Vec2f
  * Adds a [Vec2f] to a [Vec2f].
  */
 public operator fun Vec2f.plus(other: Vec2f): Vec2f {
-    
+    return Vec2f(
+        this.x + other.x,
+        this.y + other.y
+    )
 }
 
 /**
  * Subtracts a [Vec2f] from a [Vec2f].
  */
 public operator fun Vec2f.minus(other: Vec2f): Vec2f {
-    
+    return Vec2f(
+        this.x - other.x,
+        this.y - other.y
+    )
 }
 
 /**
  * Multiplies a [Vec2f] and a [Vec2f].
  */
 public operator fun Vec2f.times(other: Vec2f): Vec2f {
-    
+    return Vec2f(
+        this.x * other.x,
+        this.y * other.y
+    )
 }
 
 /**
  * Divides a [Vec2f] and a [Vec2f].
  */
 public operator fun Vec2f.div(other: Vec2f): Vec2f {
-    
+    return Vec2f(
+        this.x / other.x,
+        this.y / other.y
+    )
 }
 
 /**
  * Negates a [Vec2f].
  */
 public operator fun Vec2f.unaryMinus(): Vec2f {
-    
+    return Vec2f(
+        -this.x,
+        -this.y
+    )
 }
 

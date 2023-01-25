@@ -10,34 +10,59 @@ import org.joml.Vector4d
  * Adds a [Vector4d] to a [Vector4d].
  */
 public operator fun Vector4d.plus(other: Vector4d): Vector4d {
-    
+    return Vector4d(
+        this.x + other.x,
+        this.y + other.y,
+        this.z + other.z,
+        this.w + other.w
+    )
 }
 
 /**
  * Subtracts a [Vector4d] from a [Vector4d].
  */
 public operator fun Vector4d.minus(other: Vector4d): Vector4d {
-    
+    return Vector4d(
+        this.x - other.x,
+        this.y - other.y,
+        this.z - other.z,
+        this.w - other.w
+    )
 }
 
 /**
  * Multiplies a [Vector4d] and a [Vector4d].
  */
 public operator fun Vector4d.times(other: Vector4d): Vector4d {
-    
+    return Vector4d(
+        this.x * other.x,
+        this.y * other.y,
+        this.z * other.z,
+        this.w * other.w
+    )
 }
 
 /**
  * Divides a [Vector4d] and a [Vector4d].
  */
 public operator fun Vector4d.div(other: Vector4d): Vector4d {
-    
+    return Vector4d(
+        this.x / other.x,
+        this.y / other.y,
+        this.z / other.z,
+        this.w / other.w
+    )
 }
 
 /**
  * Negates a [Vector4d].
  */
 public operator fun Vector4d.unaryMinus(): Vector4d {
-    
+    return Vector4d(
+        -this.x,
+        -this.y,
+        -this.z,
+        -this.w
+    )
 }
 

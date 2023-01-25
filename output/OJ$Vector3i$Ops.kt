@@ -10,34 +10,54 @@ import org.joml.Vector3i
  * Adds a [Vector3i] to a [Vector3i].
  */
 public operator fun Vector3i.plus(other: Vector3i): Vector3i {
-    
+    return Vector3i(
+        this.x + other.x,
+        this.y + other.y,
+        this.z + other.z
+    )
 }
 
 /**
  * Subtracts a [Vector3i] from a [Vector3i].
  */
 public operator fun Vector3i.minus(other: Vector3i): Vector3i {
-    
+    return Vector3i(
+        this.x - other.x,
+        this.y - other.y,
+        this.z - other.z
+    )
 }
 
 /**
  * Multiplies a [Vector3i] and a [Vector3i].
  */
 public operator fun Vector3i.times(other: Vector3i): Vector3i {
-    
+    return Vector3i(
+        this.x * other.x,
+        this.y * other.y,
+        this.z * other.z
+    )
 }
 
 /**
  * Divides a [Vector3i] and a [Vector3i].
  */
 public operator fun Vector3i.div(other: Vector3i): Vector3i {
-    
+    return Vector3i(
+        this.x / other.x,
+        this.y / other.y,
+        this.z / other.z
+    )
 }
 
 /**
  * Negates a [Vector3i].
  */
 public operator fun Vector3i.unaryMinus(): Vector3i {
-    
+    return Vector3i(
+        -this.x,
+        -this.y,
+        -this.z
+    )
 }
 

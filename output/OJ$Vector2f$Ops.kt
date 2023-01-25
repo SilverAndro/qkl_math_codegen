@@ -10,34 +10,49 @@ import org.joml.Vector2f
  * Adds a [Vector2f] to a [Vector2f].
  */
 public operator fun Vector2f.plus(other: Vector2f): Vector2f {
-    
+    return Vector2f(
+        this.x + other.x,
+        this.y + other.y
+    )
 }
 
 /**
  * Subtracts a [Vector2f] from a [Vector2f].
  */
 public operator fun Vector2f.minus(other: Vector2f): Vector2f {
-    
+    return Vector2f(
+        this.x - other.x,
+        this.y - other.y
+    )
 }
 
 /**
  * Multiplies a [Vector2f] and a [Vector2f].
  */
 public operator fun Vector2f.times(other: Vector2f): Vector2f {
-    
+    return Vector2f(
+        this.x * other.x,
+        this.y * other.y
+    )
 }
 
 /**
  * Divides a [Vector2f] and a [Vector2f].
  */
 public operator fun Vector2f.div(other: Vector2f): Vector2f {
-    
+    return Vector2f(
+        this.x / other.x,
+        this.y / other.y
+    )
 }
 
 /**
  * Negates a [Vector2f].
  */
 public operator fun Vector2f.unaryMinus(): Vector2f {
-    
+    return Vector2f(
+        -this.x,
+        -this.y
+    )
 }
 
