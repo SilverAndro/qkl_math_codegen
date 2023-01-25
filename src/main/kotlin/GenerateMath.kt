@@ -53,6 +53,7 @@ fun generateMath(output: OutputStream, type: MathType) {
         if (types.any { canOperateWith(type, it) }) {
             section("Type compatibility operator variations") {
                 types.filter { canOperateWith(type, it) }.forEach {
+                    import(it)
                     method {
                         kdoc { "Adds a [${it.path}] to a [${type.path}]." }
                         name = "plus"
@@ -91,6 +92,18 @@ fun generateMath(output: OutputStream, type: MathType) {
                 }
             }
         }
+
+        section("Vector specific operators") {
+            repeat(type.components.count) {
+                method {
+                    kdoc { "The [`${component(it)}`][$type.${component(it)}] of a [$type]." }
+                    name = "component${it+1}"
+                    isOperator = true
+                    returnType = type.backingType.display
+                    body { "this.${component(it)}" }
+                }
+            }
+        }
     }.write(output)
 }
 
@@ -103,7 +116,7 @@ fun generateOp(type: MathType, operation: Char): String {
         repeat(type.components.count) {
             appendLine(
                 "    " + generateOpLine(
-                    arrayOf('x', 'y', 'z', 'w')[it],
+                    component(it),
                     operation,
                     it != type.components.count - 1
                 )

@@ -7,7 +7,10 @@ class MathTypeMethod : MathTypeSection {
     var isOperator = false
     private var comment: String? = null
     private var body: String? = null
-    var returnType: MathType? = null
+    var returnType: Any? = null
+        set(value) {
+            field = value?.toString()
+        }
 
     val params = mutableListOf<Param>()
 

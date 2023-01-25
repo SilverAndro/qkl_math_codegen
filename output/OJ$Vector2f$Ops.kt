@@ -5,6 +5,8 @@
 package org.quiltmc.qkl.library.math
 
 import org.joml.Vector2f
+import net.minecraft.util.math.Vec2f
+import net.minecraft.client.util.math.Vector2f
 
 //region Standard math operators
 /**
@@ -141,6 +143,23 @@ public operator fun Vector2f.div(other: Vector2f): Vector2f {
         this.x / other.x,
         this.y / other.y
     )
+}
+
+//endregion
+
+//region Vector specific operators
+/**
+ * The [`x`][Vector2f.x] of a [Vector2f].
+ */
+public operator fun Vector2f.component1(): Float {
+    this.x
+}
+
+/**
+ * The [`y`][Vector2f.y] of a [Vector2f].
+ */
+public operator fun Vector2f.component2(): Float {
+    this.y
 }
 
 //endregion

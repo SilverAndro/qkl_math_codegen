@@ -85,3 +85,5 @@ val types = buildList {
 fun canOperateWith(typeA: MathType, typeB: MathType): Boolean {
     return typeA != typeB && typeA.components == typeB.components && typeA.backingType == typeB.backingType
 }
+
+fun component(index: Int) = arrayOf('x', 'y', 'z', 'w')[index]

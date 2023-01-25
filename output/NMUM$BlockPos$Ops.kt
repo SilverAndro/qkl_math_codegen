@@ -5,6 +5,8 @@
 package org.quiltmc.qkl.library.math
 
 import net.minecraft.util.math.BlockPos
+import org.joml.Vector3i
+import net.minecraft.util.math.Vec3i
 
 //region Standard math operators
 /**
@@ -154,6 +156,30 @@ public operator fun BlockPos.div(other: BlockPos): BlockPos {
         this.y / other.y,
         this.z / other.z
     )
+}
+
+//endregion
+
+//region Vector specific operators
+/**
+ * The [`x`][BlockPos.x] of a [BlockPos].
+ */
+public operator fun BlockPos.component1(): Int {
+    this.x
+}
+
+/**
+ * The [`y`][BlockPos.y] of a [BlockPos].
+ */
+public operator fun BlockPos.component2(): Int {
+    this.y
+}
+
+/**
+ * The [`z`][BlockPos.z] of a [BlockPos].
+ */
+public operator fun BlockPos.component3(): Int {
+    this.z
 }
 
 //endregion

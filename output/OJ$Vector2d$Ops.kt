@@ -60,3 +60,20 @@ public operator fun Vector2d.unaryMinus(): Vector2d {
 
 //endregion
 
+//region Vector specific operators
+/**
+ * The [`x`][Vector2d.x] of a [Vector2d].
+ */
+public operator fun Vector2d.component1(): Double {
+    this.x
+}
+
+/**
+ * The [`y`][Vector2d.y] of a [Vector2d].
+ */
+public operator fun Vector2d.component2(): Double {
+    this.y
+}
+
+//endregion
+

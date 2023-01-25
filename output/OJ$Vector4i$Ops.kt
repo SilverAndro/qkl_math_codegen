@@ -70,3 +70,34 @@ public operator fun Vector4i.unaryMinus(): Vector4i {
 
 //endregion
 
+//region Vector specific operators
+/**
+ * The [`x`][Vector4i.x] of a [Vector4i].
+ */
+public operator fun Vector4i.component1(): Int {
+    this.x
+}
+
+/**
+ * The [`y`][Vector4i.y] of a [Vector4i].
+ */
+public operator fun Vector4i.component2(): Int {
+    this.y
+}
+
+/**
+ * The [`z`][Vector4i.z] of a [Vector4i].
+ */
+public operator fun Vector4i.component3(): Int {
+    this.z
+}
+
+/**
+ * The [`w`][Vector4i.w] of a [Vector4i].
+ */
+public operator fun Vector4i.component4(): Int {
+    this.w
+}
+
+//endregion
+

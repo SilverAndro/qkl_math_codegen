@@ -65,3 +65,27 @@ public operator fun Vector3f.unaryMinus(): Vector3f {
 
 //endregion
 
+//region Vector specific operators
+/**
+ * The [`x`][Vector3f.x] of a [Vector3f].
+ */
+public operator fun Vector3f.component1(): Float {
+    this.x
+}
+
+/**
+ * The [`y`][Vector3f.y] of a [Vector3f].
+ */
+public operator fun Vector3f.component2(): Float {
+    this.y
+}
+
+/**
+ * The [`z`][Vector3f.z] of a [Vector3f].
+ */
+public operator fun Vector3f.component3(): Float {
+    this.z
+}
+
+//endregion
+

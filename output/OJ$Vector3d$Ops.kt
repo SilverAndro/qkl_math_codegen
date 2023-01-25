@@ -5,6 +5,7 @@
 package org.quiltmc.qkl.library.math
 
 import org.joml.Vector3d
+import net.minecraft.util.math.Vec3d
 
 //region Standard math operators
 /**
@@ -109,6 +110,30 @@ public operator fun Vector3d.div(other: Vector3d): Vector3d {
         this.y / other.y,
         this.z / other.z
     )
+}
+
+//endregion
+
+//region Vector specific operators
+/**
+ * The [`x`][Vector3d.x] of a [Vector3d].
+ */
+public operator fun Vector3d.component1(): Double {
+    this.x
+}
+
+/**
+ * The [`y`][Vector3d.y] of a [Vector3d].
+ */
+public operator fun Vector3d.component2(): Double {
+    this.y
+}
+
+/**
+ * The [`z`][Vector3d.z] of a [Vector3d].
+ */
+public operator fun Vector3d.component3(): Double {
+    this.z
 }
 
 //endregion
