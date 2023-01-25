@@ -9,15 +9,16 @@ val dir = Path("output").apply {
     createDirectory()
 }
 fun main() {
-    types.forEach {
-        output(it.uniqueName) {
-
+    types.forEach { type ->
+        output(type.uniqueName) {output ->
+            generateMath(output, type)
         }
     }
 }
 
 fun output(name: String, action: (OutputStream)->Unit) {
-    with(dir.resolve("${name}\$Math.kt").createFile().outputStream()) {
+    val file = dir.resolve("${name}\$Ops.kt").createFile()
+    with(file.outputStream()) {
         action(this)
     }
 }
