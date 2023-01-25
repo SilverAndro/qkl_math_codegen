@@ -4,6 +4,7 @@ import java.io.OutputStream
 
 fun generateMath(output: OutputStream, type: MathType) {
     MathTypeFile(type) {
+        val compatibleTypes = types.filter { canOperateWith(type, it) }
         section("Standard math operators") {
             method {
                 kdoc { "Adds a [$type] to a [$type]." }
@@ -50,9 +51,9 @@ fun generateMath(output: OutputStream, type: MathType) {
             }
         }
 
-        if (types.any { canOperateWith(type, it) }) {
+        if (compatibleTypes.isNotEmpty()) {
             section("Type compatibility operator variations") {
-                types.filter { canOperateWith(type, it) }.forEach {
+                compatibleTypes.forEach {
                     import(it)
                     method {
                         kdoc { "Adds a [${it.path}] to a [${type.path}]." }
@@ -104,11 +105,35 @@ fun generateMath(output: OutputStream, type: MathType) {
                 }
             }
         }
+
+        if (compatibleTypes.isNotEmpty()) {
+            section("Conversion methods") {
+                compatibleTypes.forEach { otherType ->
+                    method {
+                        kdoc { "Converts a [$type] to a [${otherType.path}]." }
+                        name = "to$otherType"
+                        returnType = otherType.path
+                        body {
+                            buildString {
+                                appendLine("return $otherType(")
+                                repeat(otherType.components.count) {
+                                    appendLine("    " + generateAccessLine(component(it), it != otherType.components.count - 1))
+                                }
+                                append(")")
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }.write(output)
 }
 
 fun generateOpLine(param: Char, operation: Char, hasComma: Boolean) =
     "this.$param $operation other.$param" + if (hasComma) "," else ""
+
+fun generateAccessLine(param: Char, hasComma: Boolean) =
+    "this.$param" + if (hasComma) "," else ""
 
 fun generateOp(type: MathType, operation: Char): String {
     return buildString {

@@ -180,3 +180,27 @@ public operator fun Vector3i.component3(): Int {
     return this.z
 }
 //endregion
+
+//region Conversion methods
+/**
+ * Converts a [Vector3i] to a [net.minecraft.util.math.Vec3i].
+ */
+public fun Vector3i.toVec3i(): net.minecraft.util.math.Vec3i {
+    return Vec3i(
+        this.x,
+        this.y,
+        this.z
+    )
+}
+
+/**
+ * Converts a [Vector3i] to a [net.minecraft.util.math.BlockPos].
+ */
+public fun Vector3i.toBlockPos(): net.minecraft.util.math.BlockPos {
+    return BlockPos(
+        this.x,
+        this.y,
+        this.z
+    )
+}
+//endregion

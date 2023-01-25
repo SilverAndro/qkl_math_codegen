@@ -134,3 +134,16 @@ public operator fun Vec3d.component3(): Double {
     return this.z
 }
 //endregion
+
+//region Conversion methods
+/**
+ * Converts a [Vec3d] to a [org.joml.Vector3d].
+ */
+public fun Vec3d.toVector3d(): org.joml.Vector3d {
+    return Vector3d(
+        this.x,
+        this.y,
+        this.z
+    )
+}
+//endregion

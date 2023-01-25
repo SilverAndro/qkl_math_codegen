@@ -160,3 +160,25 @@ public operator fun Vector2f.component2(): Float {
     return this.y
 }
 //endregion
+
+//region Conversion methods
+/**
+ * Converts a [Vector2f] to a [org.joml.Vector2f].
+ */
+public fun Vector2f.toVector2f(): org.joml.Vector2f {
+    return Vector2f(
+        this.x,
+        this.y
+    )
+}
+
+/**
+ * Converts a [Vector2f] to a [net.minecraft.util.math.Vec2f].
+ */
+public fun Vector2f.toVec2f(): net.minecraft.util.math.Vec2f {
+    return Vec2f(
+        this.x,
+        this.y
+    )
+}
+//endregion

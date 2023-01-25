@@ -134,3 +134,16 @@ public operator fun Vector3d.component3(): Double {
     return this.z
 }
 //endregion
+
+//region Conversion methods
+/**
+ * Converts a [Vector3d] to a [net.minecraft.util.math.Vec3d].
+ */
+public fun Vector3d.toVec3d(): net.minecraft.util.math.Vec3d {
+    return Vec3d(
+        this.x,
+        this.y,
+        this.z
+    )
+}
+//endregion
