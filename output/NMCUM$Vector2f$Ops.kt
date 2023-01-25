@@ -41,16 +41,6 @@ public operator fun Vector2f.times(other: Vector2f): Vector2f {
 }
 
 /**
- * Divides a [Vector2f] and a [Vector2f].
- */
-public operator fun Vector2f.div(other: Vector2f): Vector2f {
-    return Vector2f(
-        this.x / other.x,
-        this.y / other.y
-    )
-}
-
-/**
  * Negates a [Vector2f].
  */
 public operator fun Vector2f.unaryMinus(): Vector2f {
@@ -94,16 +84,6 @@ public operator fun Vector2f.times(other: Vector2f): Vector2f {
 }
 
 /**
- * Divides a [org.joml.Vector2f] and a [net.minecraft.client.util.math.Vector2f].
- */
-public operator fun Vector2f.div(other: Vector2f): Vector2f {
-    return Vector2f(
-        this.x / other.x,
-        this.y / other.y
-    )
-}
-
-/**
  * Adds a [net.minecraft.util.math.Vec2f] to a [net.minecraft.client.util.math.Vector2f].
  */
 public operator fun Vector2f.plus(other: Vec2f): Vector2f {
@@ -131,16 +111,6 @@ public operator fun Vector2f.times(other: Vector2f): Vector2f {
     return Vector2f(
         this.x * other.x,
         this.y * other.y
-    )
-}
-
-/**
- * Divides a [net.minecraft.util.math.Vec2f] and a [net.minecraft.client.util.math.Vector2f].
- */
-public operator fun Vector2f.div(other: Vector2f): Vector2f {
-    return Vector2f(
-        this.x / other.x,
-        this.y / other.y
     )
 }
 //endregion

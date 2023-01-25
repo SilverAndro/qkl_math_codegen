@@ -34,15 +34,6 @@ fun generateMath(output: OutputStream, type: MathType) {
             }
 
             method {
-                kdoc { "Divides a [$type] and a [$type]." }
-                name = "div"
-                isOperator = true
-                returnType = type
-                param("other", type)
-                body { generateOp(type, '/') }
-            }
-
-            method {
                 kdoc { "Negates a [$type]." }
                 name = "unaryMinus"
                 isOperator = true
@@ -80,15 +71,6 @@ fun generateMath(output: OutputStream, type: MathType) {
                         returnType = type
                         param("other", type)
                         body { generateOp(type, '*') }
-                    }
-
-                    method {
-                        kdoc { "Divides a [${it.path}] and a [${type.path}]." }
-                        name = "div"
-                        isOperator = true
-                        returnType = type
-                        param("other", type)
-                        body { generateOp(type, '/') }
                     }
                 }
             }

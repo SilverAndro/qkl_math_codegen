@@ -39,16 +39,6 @@ public operator fun Vector2d.times(other: Vector2d): Vector2d {
 }
 
 /**
- * Divides a [Vector2d] and a [Vector2d].
- */
-public operator fun Vector2d.div(other: Vector2d): Vector2d {
-    return Vector2d(
-        this.x / other.x,
-        this.y / other.y
-    )
-}
-
-/**
  * Negates a [Vector2d].
  */
 public operator fun Vector2d.unaryMinus(): Vector2d {

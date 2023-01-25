@@ -45,18 +45,6 @@ public operator fun Vector4i.times(other: Vector4i): Vector4i {
 }
 
 /**
- * Divides a [Vector4i] and a [Vector4i].
- */
-public operator fun Vector4i.div(other: Vector4i): Vector4i {
-    return Vector4i(
-        this.x / other.x,
-        this.y / other.y,
-        this.z / other.z,
-        this.w / other.w
-    )
-}
-
-/**
  * Negates a [Vector4i].
  */
 public operator fun Vector4i.unaryMinus(): Vector4i {

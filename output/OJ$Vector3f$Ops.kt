@@ -42,17 +42,6 @@ public operator fun Vector3f.times(other: Vector3f): Vector3f {
 }
 
 /**
- * Divides a [Vector3f] and a [Vector3f].
- */
-public operator fun Vector3f.div(other: Vector3f): Vector3f {
-    return Vector3f(
-        this.x / other.x,
-        this.y / other.y,
-        this.z / other.z
-    )
-}
-
-/**
  * Negates a [Vector3f].
  */
 public operator fun Vector3f.unaryMinus(): Vector3f {

@@ -44,17 +44,6 @@ public operator fun Vector3i.times(other: Vector3i): Vector3i {
 }
 
 /**
- * Divides a [Vector3i] and a [Vector3i].
- */
-public operator fun Vector3i.div(other: Vector3i): Vector3i {
-    return Vector3i(
-        this.x / other.x,
-        this.y / other.y,
-        this.z / other.z
-    )
-}
-
-/**
  * Negates a [Vector3i].
  */
 public operator fun Vector3i.unaryMinus(): Vector3i {
@@ -102,17 +91,6 @@ public operator fun Vector3i.times(other: Vector3i): Vector3i {
 }
 
 /**
- * Divides a [net.minecraft.util.math.Vec3i] and a [org.joml.Vector3i].
- */
-public operator fun Vector3i.div(other: Vector3i): Vector3i {
-    return Vector3i(
-        this.x / other.x,
-        this.y / other.y,
-        this.z / other.z
-    )
-}
-
-/**
  * Adds a [net.minecraft.util.math.BlockPos] to a [org.joml.Vector3i].
  */
 public operator fun Vector3i.plus(other: BlockPos): Vector3i {
@@ -143,17 +121,6 @@ public operator fun Vector3i.times(other: Vector3i): Vector3i {
         this.x * other.x,
         this.y * other.y,
         this.z * other.z
-    )
-}
-
-/**
- * Divides a [net.minecraft.util.math.BlockPos] and a [org.joml.Vector3i].
- */
-public operator fun Vector3i.div(other: Vector3i): Vector3i {
-    return Vector3i(
-        this.x / other.x,
-        this.y / other.y,
-        this.z / other.z
     )
 }
 //endregion

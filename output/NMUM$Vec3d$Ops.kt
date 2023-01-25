@@ -43,17 +43,6 @@ public operator fun Vec3d.times(other: Vec3d): Vec3d {
 }
 
 /**
- * Divides a [Vec3d] and a [Vec3d].
- */
-public operator fun Vec3d.div(other: Vec3d): Vec3d {
-    return Vec3d(
-        this.x / other.x,
-        this.y / other.y,
-        this.z / other.z
-    )
-}
-
-/**
  * Negates a [Vec3d].
  */
 public operator fun Vec3d.unaryMinus(): Vec3d {
@@ -97,17 +86,6 @@ public operator fun Vec3d.times(other: Vec3d): Vec3d {
         this.x * other.x,
         this.y * other.y,
         this.z * other.z
-    )
-}
-
-/**
- * Divides a [org.joml.Vector3d] and a [net.minecraft.util.math.Vec3d].
- */
-public operator fun Vec3d.div(other: Vec3d): Vec3d {
-    return Vec3d(
-        this.x / other.x,
-        this.y / other.y,
-        this.z / other.z
     )
 }
 //endregion
