@@ -6,6 +6,7 @@ package org.quiltmc.qkl.library.math
 
 import org.joml.Vector2d
 
+//region Standard math operators
 /**
  * Adds a [Vector2d] to a [Vector2d].
  */
@@ -56,3 +57,4 @@ public operator fun Vector2d.unaryMinus(): Vector2d {
     )
 }
 
+//endregion

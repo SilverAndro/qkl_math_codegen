@@ -6,6 +6,7 @@ package org.quiltmc.qkl.library.math
 
 import net.minecraft.util.math.BlockPos
 
+//region Standard math operators
 /**
  * Adds a [BlockPos] to a [BlockPos].
  */
@@ -61,3 +62,4 @@ public operator fun BlockPos.unaryMinus(): BlockPos {
     )
 }
 
+//endregion

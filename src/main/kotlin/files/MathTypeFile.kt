@@ -5,7 +5,7 @@ import java.io.OutputStream
 
 class MathTypeFile(val baseType: MathType, action: MathTypeFile.()->Unit) {
     val imports = mutableListOf<MathType>()
-    val methods = mutableListOf<MathTypeMethod>()
+    val sections = mutableListOf<MathTypeSection>()
 
     init {
         import(baseType)
@@ -16,8 +16,14 @@ class MathTypeFile(val baseType: MathType, action: MathTypeFile.()->Unit) {
         imports.add(import)
     }
 
+    fun section(sectionName: String, action: MathTypeFile.() -> Unit) {
+        sections.add(StartSection(sectionName))
+        action()
+        sections.add(EndSection())
+    }
+
     fun method(action: MathTypeMethod.()->Unit) {
-        methods.add(MathTypeMethod().apply(action))
+        sections.add(MathTypeMethod().apply(action))
     }
 
     fun write(out: OutputStream) {
@@ -35,7 +41,7 @@ class MathTypeFile(val baseType: MathType, action: MathTypeFile.()->Unit) {
                 appendLine("import ${it.path}")
             }
             appendLine()
-            methods.forEach {
+            sections.forEach {
                 append(it.write(baseType.name))
                 appendLine()
             }

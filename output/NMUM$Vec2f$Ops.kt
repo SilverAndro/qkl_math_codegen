@@ -6,6 +6,7 @@ package org.quiltmc.qkl.library.math
 
 import net.minecraft.util.math.Vec2f
 
+//region Standard math operators
 /**
  * Adds a [Vec2f] to a [Vec2f].
  */
@@ -56,3 +57,4 @@ public operator fun Vec2f.unaryMinus(): Vec2f {
     )
 }
 
+//endregion

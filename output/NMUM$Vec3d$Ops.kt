@@ -6,6 +6,7 @@ package org.quiltmc.qkl.library.math
 
 import net.minecraft.util.math.Vec3d
 
+//region Standard math operators
 /**
  * Adds a [Vec3d] to a [Vec3d].
  */
@@ -61,3 +62,4 @@ public operator fun Vec3d.unaryMinus(): Vec3d {
     )
 }
 
+//endregion

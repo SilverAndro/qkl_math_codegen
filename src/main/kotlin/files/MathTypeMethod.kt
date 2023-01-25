@@ -2,7 +2,7 @@ package files
 
 import data.MathType
 
-class MathTypeMethod {
+class MathTypeMethod : MathTypeSection {
     lateinit var name: String
     var isOperator = false
     private var comment: String? = null
@@ -25,10 +25,7 @@ class MathTypeMethod {
 
     data class Param(val name: String, val type: String)
 
-    /**
-     *
-     */
-    fun write(baseType: String): String {
+    override fun write(baseType: String): String {
         val totalComment = if (comment == null) "" else """
             /**
             ${comment!!.split("\n").map { " * $it" }.joinToString(separator = "\n", prefix = "", postfix = "")}
