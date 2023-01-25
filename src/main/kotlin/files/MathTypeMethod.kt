@@ -1,7 +1,5 @@
 package files
 
-import data.MathType
-
 class MathTypeMethod : MathTypeSection {
     lateinit var name: String
     var isOperator = false
@@ -14,7 +12,7 @@ class MathTypeMethod : MathTypeSection {
 
     val params = mutableListOf<Param>()
 
-    fun param(name: String, type: MathType) {
+    fun param(name: String, type: Any) {
         params.add(Param(name, type.toString()))
     }
 

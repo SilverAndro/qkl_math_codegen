@@ -59,6 +59,18 @@ public operator fun Vector4f.unaryMinus(): Vector4f {
 
 //region Vector specific operators
 /**
+ * Divides a [Vector4f] and a Float.
+ */
+public operator fun Vector4f.div(other: Float): Vector4f {
+    return Vector4f(
+        this.x / other,
+        this.y / other,
+        this.z / other,
+        this.w / other
+    )
+}
+
+/**
  * The [`x`][Vector4f.x] of a [Vector4f].
  */
 public operator fun Vector4f.component1(): Float {

@@ -10,9 +10,9 @@ data class MathType(val path: String, val components: Components, val backingTyp
         XYZW(4)
     }
 
-    enum class BackingType(val display: String) {
-        INT("Int"),
-        FLOAT("Float"),
-        DOUBLE("Double")
+    enum class BackingType(val display: String, val prefix: String) {
+        INT("Int", "an"),
+        FLOAT("Float", "a"),
+        DOUBLE("Double", "a")
     }
 }

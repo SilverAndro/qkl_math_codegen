@@ -127,6 +127,17 @@ public operator fun BlockPos.times(other: BlockPos): BlockPos {
 
 //region Vector specific operators
 /**
+ * Divides a [BlockPos] and an Int.
+ */
+public operator fun BlockPos.div(other: Int): BlockPos {
+    return BlockPos(
+        this.x / other,
+        this.y / other,
+        this.z / other
+    )
+}
+
+/**
  * The [`x`][BlockPos.x] of a [BlockPos].
  */
 public operator fun BlockPos.component1(): Int {

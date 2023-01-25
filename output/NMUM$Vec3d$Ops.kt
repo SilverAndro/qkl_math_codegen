@@ -92,6 +92,17 @@ public operator fun Vec3d.times(other: Vec3d): Vec3d {
 
 //region Vector specific operators
 /**
+ * Divides a [Vec3d] and a Double.
+ */
+public operator fun Vec3d.div(other: Double): Vec3d {
+    return Vec3d(
+        this.x / other,
+        this.y / other,
+        this.z / other
+    )
+}
+
+/**
  * The [`x`][Vec3d.x] of a [Vec3d].
  */
 public operator fun Vec3d.component1(): Double {

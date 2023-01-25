@@ -59,6 +59,18 @@ public operator fun Vector4i.unaryMinus(): Vector4i {
 
 //region Vector specific operators
 /**
+ * Divides a [Vector4i] and an Int.
+ */
+public operator fun Vector4i.div(other: Int): Vector4i {
+    return Vector4i(
+        this.x / other,
+        this.y / other,
+        this.z / other,
+        this.w / other
+    )
+}
+
+/**
  * The [`x`][Vector4i.x] of a [Vector4i].
  */
 public operator fun Vector4i.component1(): Int {

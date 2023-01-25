@@ -127,6 +127,17 @@ public operator fun Vec3i.times(other: Vec3i): Vec3i {
 
 //region Vector specific operators
 /**
+ * Divides a [Vec3i] and an Int.
+ */
+public operator fun Vec3i.div(other: Int): Vec3i {
+    return Vec3i(
+        this.x / other,
+        this.y / other,
+        this.z / other
+    )
+}
+
+/**
  * The [`x`][Vec3i.x] of a [Vec3i].
  */
 public operator fun Vec3i.component1(): Int {

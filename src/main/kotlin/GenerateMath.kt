@@ -77,6 +77,15 @@ fun generateMath(output: OutputStream, type: MathType) {
         }
 
         section("Vector specific operators") {
+            method {
+                kdoc { "Divides a [$type] and ${type.backingType.prefix} ${type.backingType.display}." }
+                name = "div"
+                isOperator = true
+                returnType = type
+                param("other", type.backingType.display)
+                body { generateBackingDivision(type) }
+            }
+
             repeat(type.components.count) {
                 method {
                     kdoc { "The [`${component(it)}`][$type.${component(it)}] of a [$type]." }
@@ -127,6 +136,18 @@ fun generateOp(type: MathType, operation: Char): String {
                     operation,
                     it != type.components.count - 1
                 )
+            )
+        }
+        append(")")
+    }
+}
+
+fun generateBackingDivision(type: MathType): String {
+    return buildString {
+        appendLine("return $type(")
+        repeat(type.components.count) {
+            appendLine(
+                "    this.${component(it)} / other" + if (it != type.components.count - 1) "," else ""
             )
         }
         append(")")

@@ -117,6 +117,16 @@ public operator fun Vec2f.times(other: Vec2f): Vec2f {
 
 //region Vector specific operators
 /**
+ * Divides a [Vec2f] and a Float.
+ */
+public operator fun Vec2f.div(other: Float): Vec2f {
+    return Vec2f(
+        this.x / other,
+        this.y / other
+    )
+}
+
+/**
  * The [`x`][Vec2f.x] of a [Vec2f].
  */
 public operator fun Vec2f.component1(): Float {
