@@ -6,3 +6,38 @@ package org.quiltmc.qkl.library.math
 
 import org.joml.Vector4f
 
+/**
+ * Adds a [Vector4f] to a [Vector4f].
+ */
+public operator fun Vector4f.plus(other: Vector4f): Vector4f {
+    
+}
+
+/**
+ * Subtracts a [Vector4f] from a [Vector4f].
+ */
+public operator fun Vector4f.minus(other: Vector4f): Vector4f {
+    
+}
+
+/**
+ * Multiplies a [Vector4f] and a [Vector4f].
+ */
+public operator fun Vector4f.times(other: Vector4f): Vector4f {
+    
+}
+
+/**
+ * Divides a [Vector4f] and a [Vector4f].
+ */
+public operator fun Vector4f.div(other: Vector4f): Vector4f {
+    
+}
+
+/**
+ * Negates a [Vector4f].
+ */
+public operator fun Vector4f.unaryMinus(): Vector4f {
+    
+}
+

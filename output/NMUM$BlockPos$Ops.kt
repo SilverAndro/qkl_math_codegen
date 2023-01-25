@@ -6,3 +6,38 @@ package org.quiltmc.qkl.library.math
 
 import net.minecraft.util.math.BlockPos
 
+/**
+ * Adds a [BlockPos] to a [BlockPos].
+ */
+public operator fun BlockPos.plus(other: BlockPos): BlockPos {
+    
+}
+
+/**
+ * Subtracts a [BlockPos] from a [BlockPos].
+ */
+public operator fun BlockPos.minus(other: BlockPos): BlockPos {
+    
+}
+
+/**
+ * Multiplies a [BlockPos] and a [BlockPos].
+ */
+public operator fun BlockPos.times(other: BlockPos): BlockPos {
+    
+}
+
+/**
+ * Divides a [BlockPos] and a [BlockPos].
+ */
+public operator fun BlockPos.div(other: BlockPos): BlockPos {
+    
+}
+
+/**
+ * Negates a [BlockPos].
+ */
+public operator fun BlockPos.unaryMinus(): BlockPos {
+    
+}
+

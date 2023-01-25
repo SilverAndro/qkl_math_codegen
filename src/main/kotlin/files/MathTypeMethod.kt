@@ -1,16 +1,18 @@
 package files
 
+import data.MathType
+
 class MathTypeMethod {
     lateinit var name: String
     var isOperator = false
     private var comment: String? = null
     private var body: String? = null
-    var returnType = ""
+    var returnType: MathType? = null
 
     val params = mutableListOf<Param>()
 
-    fun param(name: String, type: String) {
-        params.add(Param(name, type))
+    fun param(name: String, type: MathType) {
+        params.add(Param(name, type.toString()))
     }
 
     fun kdoc(action: ()->String) {
@@ -34,7 +36,7 @@ class MathTypeMethod {
         """.trimIndent()
 
         val declaration =
-            "${if (isOperator) "operator " else ""}fun $baseType.$name(${params.joinToString(separator = ", ") { "${it.name}: ${it.type}" }})${if (returnType.isEmpty()) "" else ": $returnType"} {\n"
+            "public ${if (isOperator) "operator " else ""}fun $baseType.$name(${params.joinToString(separator = ", ") { "${it.name}: ${it.type}" }})${if (returnType != null) ": $returnType" else ""} {\n"
         val methodBody = (body?.split("\n")?.joinToString("\n", "", "") { "    $it" } ?: "    ") + "\n"
 
         return "$totalComment$declaration$methodBody}\n"

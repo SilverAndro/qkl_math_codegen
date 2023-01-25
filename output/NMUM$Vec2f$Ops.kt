@@ -6,3 +6,38 @@ package org.quiltmc.qkl.library.math
 
 import net.minecraft.util.math.Vec2f
 
+/**
+ * Adds a [Vec2f] to a [Vec2f].
+ */
+public operator fun Vec2f.plus(other: Vec2f): Vec2f {
+    
+}
+
+/**
+ * Subtracts a [Vec2f] from a [Vec2f].
+ */
+public operator fun Vec2f.minus(other: Vec2f): Vec2f {
+    
+}
+
+/**
+ * Multiplies a [Vec2f] and a [Vec2f].
+ */
+public operator fun Vec2f.times(other: Vec2f): Vec2f {
+    
+}
+
+/**
+ * Divides a [Vec2f] and a [Vec2f].
+ */
+public operator fun Vec2f.div(other: Vec2f): Vec2f {
+    
+}
+
+/**
+ * Negates a [Vec2f].
+ */
+public operator fun Vec2f.unaryMinus(): Vec2f {
+    
+}
+

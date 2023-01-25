@@ -6,3 +6,38 @@ package org.quiltmc.qkl.library.math
 
 import org.joml.Vector2d
 
+/**
+ * Adds a [Vector2d] to a [Vector2d].
+ */
+public operator fun Vector2d.plus(other: Vector2d): Vector2d {
+    
+}
+
+/**
+ * Subtracts a [Vector2d] from a [Vector2d].
+ */
+public operator fun Vector2d.minus(other: Vector2d): Vector2d {
+    
+}
+
+/**
+ * Multiplies a [Vector2d] and a [Vector2d].
+ */
+public operator fun Vector2d.times(other: Vector2d): Vector2d {
+    
+}
+
+/**
+ * Divides a [Vector2d] and a [Vector2d].
+ */
+public operator fun Vector2d.div(other: Vector2d): Vector2d {
+    
+}
+
+/**
+ * Negates a [Vector2d].
+ */
+public operator fun Vector2d.unaryMinus(): Vector2d {
+    
+}
+

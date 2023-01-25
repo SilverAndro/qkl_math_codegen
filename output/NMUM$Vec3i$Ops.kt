@@ -6,3 +6,38 @@ package org.quiltmc.qkl.library.math
 
 import net.minecraft.util.math.Vec3i
 
+/**
+ * Adds a [Vec3i] to a [Vec3i].
+ */
+public operator fun Vec3i.plus(other: Vec3i): Vec3i {
+    
+}
+
+/**
+ * Subtracts a [Vec3i] from a [Vec3i].
+ */
+public operator fun Vec3i.minus(other: Vec3i): Vec3i {
+    
+}
+
+/**
+ * Multiplies a [Vec3i] and a [Vec3i].
+ */
+public operator fun Vec3i.times(other: Vec3i): Vec3i {
+    
+}
+
+/**
+ * Divides a [Vec3i] and a [Vec3i].
+ */
+public operator fun Vec3i.div(other: Vec3i): Vec3i {
+    
+}
+
+/**
+ * Negates a [Vec3i].
+ */
+public operator fun Vec3i.unaryMinus(): Vec3i {
+    
+}
+
