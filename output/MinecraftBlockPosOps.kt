@@ -59,7 +59,7 @@ public operator fun BlockPos.unaryMinus(): BlockPos {
 /**
  * Adds a [org.joml.Vector3i] to a [net.minecraft.util.math.BlockPos].
  */
-public operator fun BlockPos.plus(other: Vector3i): BlockPos {
+public operator fun BlockPos.plus(other: org.joml.Vector3i): BlockPos {
     return BlockPos(
         this.x + other.x,
         this.y + other.y,
@@ -93,7 +93,7 @@ public operator fun BlockPos.times(other: BlockPos): BlockPos {
 /**
  * Adds a [net.minecraft.util.math.Vec3i] to a [net.minecraft.util.math.BlockPos].
  */
-public operator fun BlockPos.plus(other: Vec3i): BlockPos {
+public operator fun BlockPos.plus(other: net.minecraft.util.math.Vec3i): BlockPos {
     return BlockPos(
         this.x + other.x,
         this.y + other.y,
@@ -161,22 +161,22 @@ public operator fun BlockPos.component3(): Int {
 /**
  * Returns the dot product of a [BlockPos] and a [org.joml.Vector3i]
  */
-public fun BlockPos.dot(): Int {
-    
+public fun BlockPos.dot(other: org.joml.Vector3i): Int {
+    return (this.x * other.x) + (this.y * other.y) + (this.z * other.z)
 }
 
 /**
  * Returns the dot product of a [BlockPos] and a [net.minecraft.util.math.Vec3i]
  */
-public fun BlockPos.dot(): Int {
-    
+public fun BlockPos.dot(other: net.minecraft.util.math.Vec3i): Int {
+    return (this.x * other.x) + (this.y * other.y) + (this.z * other.z)
 }
 
 /**
  * Returns the dot product of a [BlockPos] and a [net.minecraft.util.math.BlockPos]
  */
-public fun BlockPos.dot(): Int {
-    
+public fun BlockPos.dot(other: net.minecraft.util.math.BlockPos): Int {
+    return (this.x * other.x) + (this.y * other.y) + (this.z * other.z)
 }
 //endregion
 

@@ -55,7 +55,7 @@ public operator fun Vec2f.unaryMinus(): Vec2f {
 /**
  * Adds a [org.joml.Vector2f] to a [net.minecraft.util.math.Vec2f].
  */
-public operator fun Vec2f.plus(other: Vector2f): Vec2f {
+public operator fun Vec2f.plus(other: org.joml.Vector2f): Vec2f {
     return Vec2f(
         this.x + other.x,
         this.y + other.y
@@ -86,7 +86,7 @@ public operator fun Vec2f.times(other: Vec2f): Vec2f {
 /**
  * Adds a [net.minecraft.client.util.math.Vector2f] to a [net.minecraft.util.math.Vec2f].
  */
-public operator fun Vec2f.plus(other: Vector2f): Vec2f {
+public operator fun Vec2f.plus(other: net.minecraft.client.util.math.Vector2f): Vec2f {
     return Vec2f(
         this.x + other.x,
         this.y + other.y
@@ -143,22 +143,22 @@ public operator fun Vec2f.component2(): Float {
 /**
  * Returns the dot product of a [Vec2f] and a [org.joml.Vector2f]
  */
-public fun Vec2f.dot(): Float {
-    
+public fun Vec2f.dot(other: org.joml.Vector2f): Float {
+    return (this.x * other.x) + (this.y * other.y)
 }
 
 /**
  * Returns the dot product of a [Vec2f] and a [net.minecraft.client.util.math.Vector2f]
  */
-public fun Vec2f.dot(): Float {
-    
+public fun Vec2f.dot(other: net.minecraft.client.util.math.Vector2f): Float {
+    return (this.x * other.x) + (this.y * other.y)
 }
 
 /**
  * Returns the dot product of a [Vec2f] and a [net.minecraft.util.math.Vec2f]
  */
-public fun Vec2f.dot(): Float {
-    
+public fun Vec2f.dot(other: net.minecraft.util.math.Vec2f): Float {
+    return (this.x * other.x) + (this.y * other.y)
 }
 //endregion
 

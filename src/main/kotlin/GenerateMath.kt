@@ -51,7 +51,7 @@ fun generateMath(output: OutputStream, type: MathType) {
                         name = "plus"
                         isOperator = true
                         returnType = type
-                        param("other", it)
+                        param("other", it.path)
                         body { generateOp(type, '+') }
                     }
 
@@ -101,6 +101,18 @@ fun generateMath(output: OutputStream, type: MathType) {
                     kdoc { "Returns the dot product of a [$type] and a [${it.path}]" }
                     name = "dot"
                     returnType = type.backingType.display
+                    param("other", it.path)
+                    body {
+                        buildString {
+                            append("return ")
+                            repeat(type.components.count) {
+                                append("(this.${component(it)} * other.${component(it)})")
+                                if (it != type.components.count-1) {
+                                    append(" + ")
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

@@ -58,7 +58,7 @@ public operator fun Vector3d.unaryMinus(): Vector3d {
 /**
  * Adds a [net.minecraft.util.math.Vec3d] to a [org.joml.Vector3d].
  */
-public operator fun Vector3d.plus(other: Vec3d): Vector3d {
+public operator fun Vector3d.plus(other: net.minecraft.util.math.Vec3d): Vector3d {
     return Vector3d(
         this.x + other.x,
         this.y + other.y,
@@ -126,15 +126,15 @@ public operator fun Vector3d.component3(): Double {
 /**
  * Returns the dot product of a [Vector3d] and a [net.minecraft.util.math.Vec3d]
  */
-public fun Vector3d.dot(): Double {
-    
+public fun Vector3d.dot(other: net.minecraft.util.math.Vec3d): Double {
+    return (this.x * other.x) + (this.y * other.y) + (this.z * other.z)
 }
 
 /**
  * Returns the dot product of a [Vector3d] and a [org.joml.Vector3d]
  */
-public fun Vector3d.dot(): Double {
-    
+public fun Vector3d.dot(other: org.joml.Vector3d): Double {
+    return (this.x * other.x) + (this.y * other.y) + (this.z * other.z)
 }
 //endregion
 
