@@ -56,7 +56,7 @@ public operator fun Vec3d.unaryMinus(): Vec3d {
 
 //region Type compatibility operator variations
 /**
- * Adds a [org.joml.Vector3d] to a [net.minecraft.util.math.Vec3d].
+ * Adds a [Vector3d] to a [Vec3d].
  */
 public operator fun Vec3d.plus(other: org.joml.Vector3d): Vec3d {
     return Vec3d(
@@ -67,7 +67,7 @@ public operator fun Vec3d.plus(other: org.joml.Vector3d): Vec3d {
 }
 
 /**
- * Subtracts a [org.joml.Vector3d] from a [net.minecraft.util.math.Vec3d].
+ * Subtracts a [Vector3d] from a [Vec3d].
  */
 public operator fun Vec3d.minus(other: Vec3d): Vec3d {
     return Vec3d(
@@ -78,7 +78,7 @@ public operator fun Vec3d.minus(other: Vec3d): Vec3d {
 }
 
 /**
- * Multiplies a [org.joml.Vector3d] and a [net.minecraft.util.math.Vec3d].
+ * Multiplies a [Vector3d] and a [Vec3d].
  * This method is a shorthand for component wise multiplication.
  */
 public operator fun Vec3d.times(other: Vec3d): Vec3d {

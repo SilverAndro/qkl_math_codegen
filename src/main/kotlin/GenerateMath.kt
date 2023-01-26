@@ -48,7 +48,7 @@ fun generateMath(output: OutputStream, type: MathType) {
                 compatibleTypes.forEach {
                     import(it)
                     method {
-                        kdoc { "Adds a [${it.path}] to a [${type.path}]." }
+                        kdoc { "Adds a [${it.workingName(similarTypes, true)}] to a [${type}]." }
                         name = "plus"
                         isOperator = true
                         returnType = type
@@ -57,7 +57,7 @@ fun generateMath(output: OutputStream, type: MathType) {
                     }
 
                     method {
-                        kdoc { "Subtracts a [${it.path}] from a [${type.path}]." }
+                        kdoc { "Subtracts a [${it.workingName(similarTypes, true)}] from a [${type}]." }
                         name = "minus"
                         isOperator = true
                         returnType = type
@@ -66,7 +66,7 @@ fun generateMath(output: OutputStream, type: MathType) {
                     }
 
                     method {
-                        kdoc { "Multiplies a [${it.path}] and a [${type.path}].\nThis method is a shorthand for component wise multiplication." }
+                        kdoc { "Multiplies a [${it.workingName(similarTypes, true)}] and a [${type}].\nThis method is a shorthand for component wise multiplication." }
                         name = "times"
                         isOperator = true
                         returnType = type

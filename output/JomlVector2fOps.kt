@@ -53,7 +53,7 @@ public operator fun Vector2f.unaryMinus(): Vector2f {
 
 //region Type compatibility operator variations
 /**
- * Adds a [net.minecraft.util.math.Vec2f] to a [org.joml.Vector2f].
+ * Adds a [Vec2f] to a [Vector2f].
  */
 public operator fun Vector2f.plus(other: net.minecraft.util.math.Vec2f): Vector2f {
     return Vector2f(
@@ -63,7 +63,7 @@ public operator fun Vector2f.plus(other: net.minecraft.util.math.Vec2f): Vector2
 }
 
 /**
- * Subtracts a [net.minecraft.util.math.Vec2f] from a [org.joml.Vector2f].
+ * Subtracts a [Vec2f] from a [Vector2f].
  */
 public operator fun Vector2f.minus(other: Vector2f): Vector2f {
     return Vector2f(
@@ -73,7 +73,7 @@ public operator fun Vector2f.minus(other: Vector2f): Vector2f {
 }
 
 /**
- * Multiplies a [net.minecraft.util.math.Vec2f] and a [org.joml.Vector2f].
+ * Multiplies a [Vec2f] and a [Vector2f].
  * This method is a shorthand for component wise multiplication.
  */
 public operator fun Vector2f.times(other: Vector2f): Vector2f {
@@ -84,7 +84,7 @@ public operator fun Vector2f.times(other: Vector2f): Vector2f {
 }
 
 /**
- * Adds a [net.minecraft.client.util.math.Vector2f] to a [org.joml.Vector2f].
+ * Adds a [net.minecraft.client.util.math.Vector2f] to a [Vector2f].
  */
 public operator fun Vector2f.plus(other: net.minecraft.client.util.math.Vector2f): Vector2f {
     return Vector2f(
@@ -94,7 +94,7 @@ public operator fun Vector2f.plus(other: net.minecraft.client.util.math.Vector2f
 }
 
 /**
- * Subtracts a [net.minecraft.client.util.math.Vector2f] from a [org.joml.Vector2f].
+ * Subtracts a [net.minecraft.client.util.math.Vector2f] from a [Vector2f].
  */
 public operator fun Vector2f.minus(other: Vector2f): Vector2f {
     return Vector2f(
@@ -104,7 +104,7 @@ public operator fun Vector2f.minus(other: Vector2f): Vector2f {
 }
 
 /**
- * Multiplies a [net.minecraft.client.util.math.Vector2f] and a [org.joml.Vector2f].
+ * Multiplies a [net.minecraft.client.util.math.Vector2f] and a [Vector2f].
  * This method is a shorthand for component wise multiplication.
  */
 public operator fun Vector2f.times(other: Vector2f): Vector2f {

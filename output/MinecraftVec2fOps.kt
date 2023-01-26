@@ -53,7 +53,7 @@ public operator fun Vec2f.unaryMinus(): Vec2f {
 
 //region Type compatibility operator variations
 /**
- * Adds a [org.joml.Vector2f] to a [net.minecraft.util.math.Vec2f].
+ * Adds a [org.joml.Vector2f] to a [Vec2f].
  */
 public operator fun Vec2f.plus(other: org.joml.Vector2f): Vec2f {
     return Vec2f(
@@ -63,7 +63,7 @@ public operator fun Vec2f.plus(other: org.joml.Vector2f): Vec2f {
 }
 
 /**
- * Subtracts a [org.joml.Vector2f] from a [net.minecraft.util.math.Vec2f].
+ * Subtracts a [org.joml.Vector2f] from a [Vec2f].
  */
 public operator fun Vec2f.minus(other: Vec2f): Vec2f {
     return Vec2f(
@@ -73,7 +73,7 @@ public operator fun Vec2f.minus(other: Vec2f): Vec2f {
 }
 
 /**
- * Multiplies a [org.joml.Vector2f] and a [net.minecraft.util.math.Vec2f].
+ * Multiplies a [org.joml.Vector2f] and a [Vec2f].
  * This method is a shorthand for component wise multiplication.
  */
 public operator fun Vec2f.times(other: Vec2f): Vec2f {
@@ -84,7 +84,7 @@ public operator fun Vec2f.times(other: Vec2f): Vec2f {
 }
 
 /**
- * Adds a [net.minecraft.client.util.math.Vector2f] to a [net.minecraft.util.math.Vec2f].
+ * Adds a [net.minecraft.client.util.math.Vector2f] to a [Vec2f].
  */
 public operator fun Vec2f.plus(other: net.minecraft.client.util.math.Vector2f): Vec2f {
     return Vec2f(
@@ -94,7 +94,7 @@ public operator fun Vec2f.plus(other: net.minecraft.client.util.math.Vector2f): 
 }
 
 /**
- * Subtracts a [net.minecraft.client.util.math.Vector2f] from a [net.minecraft.util.math.Vec2f].
+ * Subtracts a [net.minecraft.client.util.math.Vector2f] from a [Vec2f].
  */
 public operator fun Vec2f.minus(other: Vec2f): Vec2f {
     return Vec2f(
@@ -104,7 +104,7 @@ public operator fun Vec2f.minus(other: Vec2f): Vec2f {
 }
 
 /**
- * Multiplies a [net.minecraft.client.util.math.Vector2f] and a [net.minecraft.util.math.Vec2f].
+ * Multiplies a [net.minecraft.client.util.math.Vector2f] and a [Vec2f].
  * This method is a shorthand for component wise multiplication.
  */
 public operator fun Vec2f.times(other: Vec2f): Vec2f {

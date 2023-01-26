@@ -57,7 +57,7 @@ public operator fun BlockPos.unaryMinus(): BlockPos {
 
 //region Type compatibility operator variations
 /**
- * Adds a [org.joml.Vector3i] to a [net.minecraft.util.math.BlockPos].
+ * Adds a [Vector3i] to a [BlockPos].
  */
 public operator fun BlockPos.plus(other: org.joml.Vector3i): BlockPos {
     return BlockPos(
@@ -68,7 +68,7 @@ public operator fun BlockPos.plus(other: org.joml.Vector3i): BlockPos {
 }
 
 /**
- * Subtracts a [org.joml.Vector3i] from a [net.minecraft.util.math.BlockPos].
+ * Subtracts a [Vector3i] from a [BlockPos].
  */
 public operator fun BlockPos.minus(other: BlockPos): BlockPos {
     return BlockPos(
@@ -79,7 +79,7 @@ public operator fun BlockPos.minus(other: BlockPos): BlockPos {
 }
 
 /**
- * Multiplies a [org.joml.Vector3i] and a [net.minecraft.util.math.BlockPos].
+ * Multiplies a [Vector3i] and a [BlockPos].
  * This method is a shorthand for component wise multiplication.
  */
 public operator fun BlockPos.times(other: BlockPos): BlockPos {
@@ -91,7 +91,7 @@ public operator fun BlockPos.times(other: BlockPos): BlockPos {
 }
 
 /**
- * Adds a [net.minecraft.util.math.Vec3i] to a [net.minecraft.util.math.BlockPos].
+ * Adds a [Vec3i] to a [BlockPos].
  */
 public operator fun BlockPos.plus(other: net.minecraft.util.math.Vec3i): BlockPos {
     return BlockPos(
@@ -102,7 +102,7 @@ public operator fun BlockPos.plus(other: net.minecraft.util.math.Vec3i): BlockPo
 }
 
 /**
- * Subtracts a [net.minecraft.util.math.Vec3i] from a [net.minecraft.util.math.BlockPos].
+ * Subtracts a [Vec3i] from a [BlockPos].
  */
 public operator fun BlockPos.minus(other: BlockPos): BlockPos {
     return BlockPos(
@@ -113,7 +113,7 @@ public operator fun BlockPos.minus(other: BlockPos): BlockPos {
 }
 
 /**
- * Multiplies a [net.minecraft.util.math.Vec3i] and a [net.minecraft.util.math.BlockPos].
+ * Multiplies a [Vec3i] and a [BlockPos].
  * This method is a shorthand for component wise multiplication.
  */
 public operator fun BlockPos.times(other: BlockPos): BlockPos {
