@@ -17,7 +17,7 @@ fun main() {
 }
 
 fun output(name: String, action: (OutputStream)->Unit) {
-    val file = dir.resolve("${name}\$Ops.kt").createFile()
+    val file = dir.resolve("${name}Ops.kt").createFile()
     with(file.outputStream()) {
         action(this)
     }

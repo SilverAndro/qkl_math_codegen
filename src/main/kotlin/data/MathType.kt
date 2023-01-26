@@ -1,8 +1,8 @@
 package data
 
-data class MathType(val path: String, val components: Components, val backingType: BackingType) {
+data class MathType(val path: String, val components: Components, val backingType: BackingType, val fallbackPrefix: String) {
     val name = path.split(".").last()
-    val uniqueName = path.split(".").dropLast(1).map { it.first().uppercase() }.joinToString(separator = "", prefix = "", postfix = "$") + name
+    val uniqueName = fallbackPrefix + name
     override fun toString() = name
 
     fun hasUniqueName(typeSet: List<MathType>): Boolean {

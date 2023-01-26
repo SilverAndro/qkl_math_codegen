@@ -110,7 +110,7 @@ fun generateMath(output: OutputStream, type: MathType) {
                 compatibleTypes.forEach { otherType ->
                     method {
                         kdoc { "Converts a [$type] to a [${otherType.path}]." }
-                        name = if (otherType.hasUniqueName(compatibleTypes)) "to$otherType" else "to${otherType.uniqueName.replace('$', '_')}"
+                        name = if (otherType.hasUniqueName(compatibleTypes)) "to$otherType" else "to${otherType.uniqueName}"
                         returnType = otherType.path
                         body {
                             buildString {

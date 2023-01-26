@@ -166,7 +166,7 @@ public fun Vec2f.dot(): Float {
 /**
  * Converts a [Vec2f] to a [org.joml.Vector2f].
  */
-public fun Vec2f.toOJ_Vector2f(): org.joml.Vector2f {
+public fun Vec2f.toJomlVector2f(): org.joml.Vector2f {
     return Vector2f(
         this.x,
         this.y
@@ -176,7 +176,7 @@ public fun Vec2f.toOJ_Vector2f(): org.joml.Vector2f {
 /**
  * Converts a [Vec2f] to a [net.minecraft.client.util.math.Vector2f].
  */
-public fun Vec2f.toNMCUM_Vector2f(): net.minecraft.client.util.math.Vector2f {
+public fun Vec2f.toMinecraftVector2f(): net.minecraft.client.util.math.Vector2f {
     return Vector2f(
         this.x,
         this.y
