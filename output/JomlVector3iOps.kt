@@ -182,7 +182,7 @@ public infix fun Vector3i.dot(other: org.joml.Vector3i): Int {
 
 //region Conversion methods
 /**
- * Converts a [Vector3i] to a [net.minecraft.util.math.Vec3i].
+ * Converts a [Vector3i] to a [Vec3i].
  */
 public fun Vector3i.toVec3i(): net.minecraft.util.math.Vec3i {
     return Vec3i(
@@ -193,7 +193,7 @@ public fun Vector3i.toVec3i(): net.minecraft.util.math.Vec3i {
 }
 
 /**
- * Converts a [Vector3i] to a [net.minecraft.util.math.BlockPos].
+ * Converts a [Vector3i] to a [BlockPos].
  */
 public fun Vector3i.toBlockPos(): net.minecraft.util.math.BlockPos {
     return BlockPos(

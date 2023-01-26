@@ -164,7 +164,7 @@ public infix fun Vector2f.dot(other: org.joml.Vector2f): Float {
 
 //region Conversion methods
 /**
- * Converts a [Vector2f] to a [net.minecraft.util.math.Vec2f].
+ * Converts a [Vector2f] to a [Vec2f].
  */
 public fun Vector2f.toVec2f(): net.minecraft.util.math.Vec2f {
     return Vec2f(
@@ -176,7 +176,7 @@ public fun Vector2f.toVec2f(): net.minecraft.util.math.Vec2f {
 /**
  * Converts a [Vector2f] to a [net.minecraft.client.util.math.Vector2f].
  */
-public fun Vector2f.toVector2f(): net.minecraft.client.util.math.Vector2f {
+public fun Vector2f.toMinecraftVector2f(): net.minecraft.client.util.math.Vector2f {
     return Vector2f(
         this.x,
         this.y

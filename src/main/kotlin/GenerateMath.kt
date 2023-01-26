@@ -5,6 +5,7 @@ import java.io.OutputStream
 fun generateMath(output: OutputStream, type: MathType) {
     MathTypeFile(type) {
         val compatibleTypes = types.filter { canOperateWith(type, it) }
+        val similarTypes = compatibleTypes + type
         section("Standard math operators") {
             method {
                 kdoc { "Adds a [$type] to a [$type]." }
@@ -96,7 +97,7 @@ fun generateMath(output: OutputStream, type: MathType) {
                 }
             }
 
-            (compatibleTypes + listOf(type)).forEach {
+            similarTypes.forEach {
                 method {
                     kdoc { "Returns the dot product of a [$type] and a [${it.path}]" }
                     name = "dot"
@@ -122,8 +123,8 @@ fun generateMath(output: OutputStream, type: MathType) {
             section("Conversion methods") {
                 compatibleTypes.forEach { otherType ->
                     method {
-                        kdoc { "Converts a [$type] to a [${otherType.path}]." }
-                        name = if (otherType.hasUniqueName(compatibleTypes)) "to$otherType" else "to${otherType.uniqueName}"
+                        kdoc { "Converts a [$type] to a [${otherType.workingName(similarTypes, true)}]." }
+                        name = "to${otherType.workingName(similarTypes)}"
                         returnType = otherType.path
                         body {
                             buildString {

@@ -140,7 +140,7 @@ public infix fun Vec3d.dot(other: net.minecraft.util.math.Vec3d): Double {
 
 //region Conversion methods
 /**
- * Converts a [Vec3d] to a [org.joml.Vector3d].
+ * Converts a [Vec3d] to a [Vector3d].
  */
 public fun Vec3d.toVector3d(): org.joml.Vector3d {
     return Vector3d(
