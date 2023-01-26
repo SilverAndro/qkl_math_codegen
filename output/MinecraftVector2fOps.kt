@@ -143,21 +143,21 @@ public operator fun Vector2f.component2(): Float {
 /**
  * Returns the dot product of a [Vector2f] and a [org.joml.Vector2f]
  */
-public fun Vector2f.dot(other: org.joml.Vector2f): Float {
+public infix fun Vector2f.dot(other: org.joml.Vector2f): Float {
     return (this.x * other.x) + (this.y * other.y)
 }
 
 /**
  * Returns the dot product of a [Vector2f] and a [net.minecraft.util.math.Vec2f]
  */
-public fun Vector2f.dot(other: net.minecraft.util.math.Vec2f): Float {
+public infix fun Vector2f.dot(other: net.minecraft.util.math.Vec2f): Float {
     return (this.x * other.x) + (this.y * other.y)
 }
 
 /**
  * Returns the dot product of a [Vector2f] and a [net.minecraft.client.util.math.Vector2f]
  */
-public fun Vector2f.dot(other: net.minecraft.client.util.math.Vector2f): Float {
+public infix fun Vector2f.dot(other: net.minecraft.client.util.math.Vector2f): Float {
     return (this.x * other.x) + (this.y * other.y)
 }
 //endregion

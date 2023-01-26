@@ -161,21 +161,21 @@ public operator fun BlockPos.component3(): Int {
 /**
  * Returns the dot product of a [BlockPos] and a [org.joml.Vector3i]
  */
-public fun BlockPos.dot(other: org.joml.Vector3i): Int {
+public infix fun BlockPos.dot(other: org.joml.Vector3i): Int {
     return (this.x * other.x) + (this.y * other.y) + (this.z * other.z)
 }
 
 /**
  * Returns the dot product of a [BlockPos] and a [net.minecraft.util.math.Vec3i]
  */
-public fun BlockPos.dot(other: net.minecraft.util.math.Vec3i): Int {
+public infix fun BlockPos.dot(other: net.minecraft.util.math.Vec3i): Int {
     return (this.x * other.x) + (this.y * other.y) + (this.z * other.z)
 }
 
 /**
  * Returns the dot product of a [BlockPos] and a [net.minecraft.util.math.BlockPos]
  */
-public fun BlockPos.dot(other: net.minecraft.util.math.BlockPos): Int {
+public infix fun BlockPos.dot(other: net.minecraft.util.math.BlockPos): Int {
     return (this.x * other.x) + (this.y * other.y) + (this.z * other.z)
 }
 //endregion

@@ -101,7 +101,7 @@ public operator fun Vector4d.component4(): Double {
 /**
  * Returns the dot product of a [Vector4d] and a [org.joml.Vector4d]
  */
-public fun Vector4d.dot(other: org.joml.Vector4d): Double {
+public infix fun Vector4d.dot(other: org.joml.Vector4d): Double {
     return (this.x * other.x) + (this.y * other.y) + (this.z * other.z) + (this.w * other.w)
 }
 //endregion

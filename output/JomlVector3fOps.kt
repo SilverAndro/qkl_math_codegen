@@ -89,7 +89,7 @@ public operator fun Vector3f.component3(): Float {
 /**
  * Returns the dot product of a [Vector3f] and a [org.joml.Vector3f]
  */
-public fun Vector3f.dot(other: org.joml.Vector3f): Float {
+public infix fun Vector3f.dot(other: org.joml.Vector3f): Float {
     return (this.x * other.x) + (this.y * other.y) + (this.z * other.z)
 }
 //endregion

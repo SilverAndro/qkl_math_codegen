@@ -100,6 +100,7 @@ fun generateMath(output: OutputStream, type: MathType) {
                 method {
                     kdoc { "Returns the dot product of a [$type] and a [${it.path}]" }
                     name = "dot"
+                    isInfix = true
                     returnType = type.backingType.display
                     param("other", it.path)
                     body {
