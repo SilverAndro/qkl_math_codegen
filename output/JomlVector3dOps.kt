@@ -56,7 +56,7 @@ public operator fun Vector3d.unaryMinus(): Vector3d {
 /**
  * Adds a [Vec3d] to a [Vector3d].
  */
-public operator fun Vector3d.plus(other: net.minecraft.util.math.Vec3d): Vector3d {
+public operator fun Vector3d.plus(other: Vec3d): Vector3d {
     return Vector3d(
         this.x + other.x,
         this.y + other.y,
@@ -67,7 +67,7 @@ public operator fun Vector3d.plus(other: net.minecraft.util.math.Vec3d): Vector3
 /**
  * Subtracts a [Vec3d] from a [Vector3d].
  */
-public operator fun Vector3d.minus(other: Vector3d): Vector3d {
+public operator fun Vector3d.minus(other: Vec3d): Vector3d {
     return Vector3d(
         this.x - other.x,
         this.y - other.y,
@@ -79,7 +79,7 @@ public operator fun Vector3d.minus(other: Vector3d): Vector3d {
  * Multiplies a [Vec3d] and a [Vector3d].
  * This method is a shorthand for component wise multiplication.
  */
-public operator fun Vector3d.times(other: Vector3d): Vector3d {
+public operator fun Vector3d.times(other: Vec3d): Vector3d {
     return Vector3d(
         this.x * other.x,
         this.y * other.y,
@@ -124,14 +124,14 @@ public operator fun Vector3d.component3(): Double {
 /**
  * Returns the dot product of a [Vector3d] and a [net.minecraft.util.math.Vec3d]
  */
-public infix fun Vector3d.dot(other: net.minecraft.util.math.Vec3d): Double {
+public infix fun Vector3d.dot(other: Vec3d): Double {
     return (this.x * other.x) + (this.y * other.y) + (this.z * other.z)
 }
 
 /**
  * Returns the dot product of a [Vector3d] and a [org.joml.Vector3d]
  */
-public infix fun Vector3d.dot(other: org.joml.Vector3d): Double {
+public infix fun Vector3d.dot(other: Vector3d): Double {
     return (this.x * other.x) + (this.y * other.y) + (this.z * other.z)
 }
 

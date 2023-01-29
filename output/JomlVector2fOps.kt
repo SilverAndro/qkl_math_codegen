@@ -52,7 +52,7 @@ public operator fun Vector2f.unaryMinus(): Vector2f {
 /**
  * Adds a [Vec2f] to a [Vector2f].
  */
-public operator fun Vector2f.plus(other: net.minecraft.util.math.Vec2f): Vector2f {
+public operator fun Vector2f.plus(other: Vec2f): Vector2f {
     return Vector2f(
         this.x + other.x,
         this.y + other.y
@@ -62,7 +62,7 @@ public operator fun Vector2f.plus(other: net.minecraft.util.math.Vec2f): Vector2
 /**
  * Subtracts a [Vec2f] from a [Vector2f].
  */
-public operator fun Vector2f.minus(other: Vector2f): Vector2f {
+public operator fun Vector2f.minus(other: Vec2f): Vector2f {
     return Vector2f(
         this.x - other.x,
         this.y - other.y
@@ -73,7 +73,7 @@ public operator fun Vector2f.minus(other: Vector2f): Vector2f {
  * Multiplies a [Vec2f] and a [Vector2f].
  * This method is a shorthand for component wise multiplication.
  */
-public operator fun Vector2f.times(other: Vector2f): Vector2f {
+public operator fun Vector2f.times(other: Vec2f): Vector2f {
     return Vector2f(
         this.x * other.x,
         this.y * other.y
@@ -93,7 +93,7 @@ public operator fun Vector2f.plus(other: net.minecraft.client.util.math.Vector2f
 /**
  * Subtracts a [net.minecraft.client.util.math.Vector2f] from a [Vector2f].
  */
-public operator fun Vector2f.minus(other: Vector2f): Vector2f {
+public operator fun Vector2f.minus(other: net.minecraft.client.util.math.Vector2f): Vector2f {
     return Vector2f(
         this.x - other.x,
         this.y - other.y
@@ -104,7 +104,7 @@ public operator fun Vector2f.minus(other: Vector2f): Vector2f {
  * Multiplies a [net.minecraft.client.util.math.Vector2f] and a [Vector2f].
  * This method is a shorthand for component wise multiplication.
  */
-public operator fun Vector2f.times(other: Vector2f): Vector2f {
+public operator fun Vector2f.times(other: net.minecraft.client.util.math.Vector2f): Vector2f {
     return Vector2f(
         this.x * other.x,
         this.y * other.y
@@ -140,7 +140,7 @@ public operator fun Vector2f.component2(): Float {
 /**
  * Returns the dot product of a [Vector2f] and a [net.minecraft.util.math.Vec2f]
  */
-public infix fun Vector2f.dot(other: net.minecraft.util.math.Vec2f): Float {
+public infix fun Vector2f.dot(other: Vec2f): Float {
     return (this.x * other.x) + (this.y * other.y)
 }
 

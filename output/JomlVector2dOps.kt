@@ -75,7 +75,7 @@ public operator fun Vector2d.component2(): Double {
 /**
  * Returns the dot product of a [Vector2d] and a [org.joml.Vector2d]
  */
-public infix fun Vector2d.dot(other: org.joml.Vector2d): Double {
+public infix fun Vector2d.dot(other: Vector2d): Double {
     return (this.x * other.x) + (this.y * other.y)
 }
 //endregion

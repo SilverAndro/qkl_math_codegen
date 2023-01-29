@@ -58,7 +58,7 @@ fun generateMath(output: OutputStream, type: MathType) {
                         name = "plus"
                         isOperator = true
                         returnType = type
-                        param("other", it.path)
+                        param("other", it.workingName(similarTypes, true))
                         body { generateOp(type, '+') }
                     }
 
@@ -67,7 +67,7 @@ fun generateMath(output: OutputStream, type: MathType) {
                         name = "minus"
                         isOperator = true
                         returnType = type
-                        param("other", type)
+                        param("other", it.workingName(similarTypes, true))
                         body { generateOp(type, '-') }
                     }
 
@@ -76,7 +76,7 @@ fun generateMath(output: OutputStream, type: MathType) {
                         name = "times"
                         isOperator = true
                         returnType = type
-                        param("other", type)
+                        param("other", it.workingName(similarTypes, true))
                         body { generateOp(type, '*') }
                     }
                 }
@@ -109,7 +109,7 @@ fun generateMath(output: OutputStream, type: MathType) {
                     name = "dot"
                     isInfix = true
                     returnType = type.backingType.display
-                    param("other", it.path)
+                    param("other", it.workingName(similarTypes, true))
                     body {
                         buildString {
                             append("return ")

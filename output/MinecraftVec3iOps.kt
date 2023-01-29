@@ -57,7 +57,7 @@ public operator fun Vec3i.unaryMinus(): Vec3i {
 /**
  * Adds a [Vector3i] to a [Vec3i].
  */
-public operator fun Vec3i.plus(other: org.joml.Vector3i): Vec3i {
+public operator fun Vec3i.plus(other: Vector3i): Vec3i {
     return Vec3i(
         this.x + other.x,
         this.y + other.y,
@@ -68,7 +68,7 @@ public operator fun Vec3i.plus(other: org.joml.Vector3i): Vec3i {
 /**
  * Subtracts a [Vector3i] from a [Vec3i].
  */
-public operator fun Vec3i.minus(other: Vec3i): Vec3i {
+public operator fun Vec3i.minus(other: Vector3i): Vec3i {
     return Vec3i(
         this.x - other.x,
         this.y - other.y,
@@ -80,7 +80,7 @@ public operator fun Vec3i.minus(other: Vec3i): Vec3i {
  * Multiplies a [Vector3i] and a [Vec3i].
  * This method is a shorthand for component wise multiplication.
  */
-public operator fun Vec3i.times(other: Vec3i): Vec3i {
+public operator fun Vec3i.times(other: Vector3i): Vec3i {
     return Vec3i(
         this.x * other.x,
         this.y * other.y,
@@ -91,7 +91,7 @@ public operator fun Vec3i.times(other: Vec3i): Vec3i {
 /**
  * Adds a [BlockPos] to a [Vec3i].
  */
-public operator fun Vec3i.plus(other: net.minecraft.util.math.BlockPos): Vec3i {
+public operator fun Vec3i.plus(other: BlockPos): Vec3i {
     return Vec3i(
         this.x + other.x,
         this.y + other.y,
@@ -102,7 +102,7 @@ public operator fun Vec3i.plus(other: net.minecraft.util.math.BlockPos): Vec3i {
 /**
  * Subtracts a [BlockPos] from a [Vec3i].
  */
-public operator fun Vec3i.minus(other: Vec3i): Vec3i {
+public operator fun Vec3i.minus(other: BlockPos): Vec3i {
     return Vec3i(
         this.x - other.x,
         this.y - other.y,
@@ -114,7 +114,7 @@ public operator fun Vec3i.minus(other: Vec3i): Vec3i {
  * Multiplies a [BlockPos] and a [Vec3i].
  * This method is a shorthand for component wise multiplication.
  */
-public operator fun Vec3i.times(other: Vec3i): Vec3i {
+public operator fun Vec3i.times(other: BlockPos): Vec3i {
     return Vec3i(
         this.x * other.x,
         this.y * other.y,
@@ -159,21 +159,21 @@ public operator fun Vec3i.component3(): Int {
 /**
  * Returns the dot product of a [Vec3i] and a [org.joml.Vector3i]
  */
-public infix fun Vec3i.dot(other: org.joml.Vector3i): Int {
+public infix fun Vec3i.dot(other: Vector3i): Int {
     return (this.x * other.x) + (this.y * other.y) + (this.z * other.z)
 }
 
 /**
  * Returns the dot product of a [Vec3i] and a [net.minecraft.util.math.BlockPos]
  */
-public infix fun Vec3i.dot(other: net.minecraft.util.math.BlockPos): Int {
+public infix fun Vec3i.dot(other: BlockPos): Int {
     return (this.x * other.x) + (this.y * other.y) + (this.z * other.z)
 }
 
 /**
  * Returns the dot product of a [Vec3i] and a [net.minecraft.util.math.Vec3i]
  */
-public infix fun Vec3i.dot(other: net.minecraft.util.math.Vec3i): Int {
+public infix fun Vec3i.dot(other: Vec3i): Int {
     return (this.x * other.x) + (this.y * other.y) + (this.z * other.z)
 }
 
