@@ -117,6 +117,17 @@ fun generateMath(output: OutputStream, type: MathType) {
                     }
                 }
             }
+
+            if (type.components == MathType.Components.XYZ) {
+                similarTypes.forEach {
+                    method {
+                        kdoc { "Returns the cross product of a [$type] and a [${it.workingName(similarTypes, true)}]" }
+                        name = "cross"
+                        isInfix = true
+                        param("other", it.workingName(similarTypes, true))
+                    }
+                }
+            }
         }
 
         if (compatibleTypes.isNotEmpty()) {

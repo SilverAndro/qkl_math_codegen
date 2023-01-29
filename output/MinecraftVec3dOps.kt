@@ -136,6 +136,20 @@ public infix fun Vec3d.dot(other: org.joml.Vector3d): Double {
 public infix fun Vec3d.dot(other: net.minecraft.util.math.Vec3d): Double {
     return (this.x * other.x) + (this.y * other.y) + (this.z * other.z)
 }
+
+/**
+ * Returns the cross product of a [Vec3d] and a [Vector3d]
+ */
+public infix fun Vec3d.cross(other: Vector3d) {
+    
+}
+
+/**
+ * Returns the cross product of a [Vec3d] and a [Vec3d]
+ */
+public infix fun Vec3d.cross(other: Vec3d) {
+    
+}
 //endregion
 
 //region Conversion methods

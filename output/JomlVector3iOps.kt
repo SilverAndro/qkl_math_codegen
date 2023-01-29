@@ -178,6 +178,27 @@ public infix fun Vector3i.dot(other: net.minecraft.util.math.BlockPos): Int {
 public infix fun Vector3i.dot(other: org.joml.Vector3i): Int {
     return (this.x * other.x) + (this.y * other.y) + (this.z * other.z)
 }
+
+/**
+ * Returns the cross product of a [Vector3i] and a [Vec3i]
+ */
+public infix fun Vector3i.cross(other: Vec3i) {
+    
+}
+
+/**
+ * Returns the cross product of a [Vector3i] and a [BlockPos]
+ */
+public infix fun Vector3i.cross(other: BlockPos) {
+    
+}
+
+/**
+ * Returns the cross product of a [Vector3i] and a [Vector3i]
+ */
+public infix fun Vector3i.cross(other: Vector3i) {
+    
+}
 //endregion
 
 //region Conversion methods
