@@ -97,7 +97,7 @@ public operator fun Vector4f.component4(): Float {
 }
 
 /**
- * Returns the dot product of a [Vector4f] and a [org.joml.Vector4f]
+ * Returns the dot product of a [Vector4f] and a [Vector4f]
  */
 public infix fun Vector4f.dot(other: Vector4f): Float {
     return (this.x * other.x) + (this.y * other.y) + (this.z * other.z) + (this.w * other.w)

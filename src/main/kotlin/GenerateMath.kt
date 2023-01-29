@@ -105,11 +105,11 @@ fun generateMath(output: OutputStream, type: MathType) {
 
             similarTypes.forEach {
                 method {
-                    kdoc { "Returns the dot product of a [$type] and a [${it.path}]" }
+                    kdoc { "Returns the dot product of a [$type] and a [${it.workingName(similarTypes, true, type)}]" }
                     name = "dot"
                     isInfix = true
                     returnType = type.backingType.display
-                    param("other", it.workingName(compatibleTypes, true))
+                    param("other", it.workingName(similarTypes, true, type))
                     body {
                         buildString {
                             append("return ")

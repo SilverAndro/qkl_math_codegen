@@ -157,21 +157,21 @@ public operator fun Vector3i.component3(): Int {
 }
 
 /**
- * Returns the dot product of a [Vector3i] and a [net.minecraft.util.math.Vec3i]
+ * Returns the dot product of a [Vector3i] and a [Vec3i]
  */
 public infix fun Vector3i.dot(other: Vec3i): Int {
     return (this.x * other.x) + (this.y * other.y) + (this.z * other.z)
 }
 
 /**
- * Returns the dot product of a [Vector3i] and a [net.minecraft.util.math.BlockPos]
+ * Returns the dot product of a [Vector3i] and a [BlockPos]
  */
 public infix fun Vector3i.dot(other: BlockPos): Int {
     return (this.x * other.x) + (this.y * other.y) + (this.z * other.z)
 }
 
 /**
- * Returns the dot product of a [Vector3i] and a [org.joml.Vector3i]
+ * Returns the dot product of a [Vector3i] and a [Vector3i]
  */
 public infix fun Vector3i.dot(other: Vector3i): Int {
     return (this.x * other.x) + (this.y * other.y) + (this.z * other.z)

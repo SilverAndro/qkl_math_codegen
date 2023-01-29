@@ -9,7 +9,10 @@ data class MathType(val path: String, val components: Components, val backingTyp
         return typeSet.any { it != this && it.toString() == this.toString() }.not()
     }
 
-    fun workingName(typeSet: List<MathType>, pathInstead: Boolean = false): String = if (hasUniqueName(typeSet)) name else if (pathInstead) path else uniqueName
+    fun workingName(typeSet: List<MathType>, pathInstead: Boolean = false, check: MathType? = null): String {
+        if (this == check) return this.toString()
+        return if (hasUniqueName(typeSet)) name else if (pathInstead) path else uniqueName
+    }
 
     enum class Components(val count: Int) {
         XY(2),

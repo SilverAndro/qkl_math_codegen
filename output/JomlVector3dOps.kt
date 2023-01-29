@@ -122,14 +122,14 @@ public operator fun Vector3d.component3(): Double {
 }
 
 /**
- * Returns the dot product of a [Vector3d] and a [net.minecraft.util.math.Vec3d]
+ * Returns the dot product of a [Vector3d] and a [Vec3d]
  */
 public infix fun Vector3d.dot(other: Vec3d): Double {
     return (this.x * other.x) + (this.y * other.y) + (this.z * other.z)
 }
 
 /**
- * Returns the dot product of a [Vector3d] and a [org.joml.Vector3d]
+ * Returns the dot product of a [Vector3d] and a [Vector3d]
  */
 public infix fun Vector3d.dot(other: Vector3d): Double {
     return (this.x * other.x) + (this.y * other.y) + (this.z * other.z)

@@ -151,7 +151,7 @@ public infix fun Vec2f.dot(other: net.minecraft.client.util.math.Vector2f): Floa
 }
 
 /**
- * Returns the dot product of a [Vec2f] and a [net.minecraft.util.math.Vec2f]
+ * Returns the dot product of a [Vec2f] and a [Vec2f]
  */
 public infix fun Vec2f.dot(other: Vec2f): Float {
     return (this.x * other.x) + (this.y * other.y)
