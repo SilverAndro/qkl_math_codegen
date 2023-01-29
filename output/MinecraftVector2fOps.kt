@@ -140,7 +140,7 @@ public operator fun Vector2f.component2(): Float {
 /**
  * Returns the dot product of a [Vector2f] and a [org.joml.Vector2f]
  */
-public infix fun Vector2f.dot(other: org.joml.Vector2f): Float {
+public infix fun Vector2f.dot(other: Vector2f): Float {
     return (this.x * other.x) + (this.y * other.y)
 }
 

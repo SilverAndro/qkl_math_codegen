@@ -109,7 +109,7 @@ fun generateMath(output: OutputStream, type: MathType) {
                     name = "dot"
                     isInfix = true
                     returnType = type.backingType.display
-                    param("other", it.workingName(similarTypes, true))
+                    param("other", it.workingName(compatibleTypes, true))
                     body {
                         buildString {
                             append("return ")
