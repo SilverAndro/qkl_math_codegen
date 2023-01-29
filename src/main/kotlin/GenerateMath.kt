@@ -6,6 +6,13 @@ fun generateMath(output: OutputStream, type: MathType) {
     MathTypeFile(type) {
         val compatibleTypes = types.filter { canOperateWith(type, it) }
         val similarTypes = compatibleTypes + type
+
+        compatibleTypes.forEach {
+            if (it.hasUniqueName(similarTypes)) {
+                import(it)
+            }
+        }
+
         section("Standard math operators") {
             method {
                 kdoc { "Adds a [$type] to a [$type]." }
@@ -46,7 +53,6 @@ fun generateMath(output: OutputStream, type: MathType) {
         if (compatibleTypes.isNotEmpty()) {
             section("Type compatibility operator variations") {
                 compatibleTypes.forEach {
-                    import(it)
                     method {
                         kdoc { "Adds a [${it.workingName(similarTypes, true)}] to a [${type}]." }
                         name = "plus"
@@ -124,6 +130,7 @@ fun generateMath(output: OutputStream, type: MathType) {
                         kdoc { "Returns the cross product of a [$type] and a [${it.workingName(similarTypes, true)}]" }
                         name = "cross"
                         isInfix = true
+                        returnType = type
                         param("other", it.workingName(similarTypes, true))
                         body {
                             buildString {
@@ -145,10 +152,10 @@ fun generateMath(output: OutputStream, type: MathType) {
                     method {
                         kdoc { "Converts a [$type] to a [${otherType.workingName(similarTypes, true)}]." }
                         name = "to${otherType.workingName(similarTypes)}"
-                        returnType = otherType.path
+                        returnType = otherType.workingName(similarTypes, true)
                         body {
                             buildString {
-                                appendLine("return $otherType(")
+                                appendLine("return ${otherType.workingName(similarTypes, true)}(")
                                 repeat(otherType.components.count) {
                                     appendLine("    " + generateAccessLine(component(it), it != otherType.components.count - 1))
                                 }
