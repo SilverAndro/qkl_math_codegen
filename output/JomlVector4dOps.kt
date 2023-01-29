@@ -97,7 +97,7 @@ public operator fun Vector4d.component4(): Double {
 }
 
 /**
- * Returns the dot product of a [Vector4d] and a [Vector4d]
+ * Returns the dot product of a [Vector4d] and a [Vector4d].
  */
 public infix fun Vector4d.dot(other: Vector4d): Double {
     return (this.x * other.x) + (this.y * other.y) + (this.z * other.z) + (this.w * other.w)

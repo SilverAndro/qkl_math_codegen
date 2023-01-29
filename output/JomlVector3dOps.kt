@@ -122,21 +122,21 @@ public operator fun Vector3d.component3(): Double {
 }
 
 /**
- * Returns the dot product of a [Vector3d] and a [Vec3d]
+ * Returns the dot product of a [Vector3d] and a [Vec3d].
  */
 public infix fun Vector3d.dot(other: Vec3d): Double {
     return (this.x * other.x) + (this.y * other.y) + (this.z * other.z)
 }
 
 /**
- * Returns the dot product of a [Vector3d] and a [Vector3d]
+ * Returns the dot product of a [Vector3d] and a [Vector3d].
  */
 public infix fun Vector3d.dot(other: Vector3d): Double {
     return (this.x * other.x) + (this.y * other.y) + (this.z * other.z)
 }
 
 /**
- * Returns the cross product of a [Vector3d] and a [Vec3d]
+ * Returns the cross product of a [Vector3d] and a [Vec3d].
  */
 public infix fun Vector3d.cross(other: Vec3d): Vector3d {
     return Vector3d(
@@ -147,7 +147,7 @@ public infix fun Vector3d.cross(other: Vec3d): Vector3d {
 }
 
 /**
- * Returns the cross product of a [Vector3d] and a [Vector3d]
+ * Returns the cross product of a [Vector3d] and a [Vector3d].
  */
 public infix fun Vector3d.cross(other: Vector3d): Vector3d {
     return Vector3d(

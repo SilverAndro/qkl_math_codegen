@@ -85,14 +85,14 @@ public operator fun Vector3f.component3(): Float {
 }
 
 /**
- * Returns the dot product of a [Vector3f] and a [Vector3f]
+ * Returns the dot product of a [Vector3f] and a [Vector3f].
  */
 public infix fun Vector3f.dot(other: Vector3f): Float {
     return (this.x * other.x) + (this.y * other.y) + (this.z * other.z)
 }
 
 /**
- * Returns the cross product of a [Vector3f] and a [Vector3f]
+ * Returns the cross product of a [Vector3f] and a [Vector3f].
  */
 public infix fun Vector3f.cross(other: Vector3f): Vector3f {
     return Vector3f(

@@ -73,7 +73,7 @@ public operator fun Vector2i.component2(): Int {
 }
 
 /**
- * Returns the dot product of a [Vector2i] and a [Vector2i]
+ * Returns the dot product of a [Vector2i] and a [Vector2i].
  */
 public infix fun Vector2i.dot(other: Vector2i): Int {
     return (this.x * other.x) + (this.y * other.y)

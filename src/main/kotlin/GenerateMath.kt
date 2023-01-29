@@ -105,7 +105,7 @@ fun generateMath(output: OutputStream, type: MathType) {
 
             similarTypes.forEach {
                 method {
-                    kdoc { "Returns the dot product of a [$type] and a [${it.workingName(similarTypes, true, type)}]" }
+                    kdoc { "Returns the dot product of a [$type] and a [${it.workingName(similarTypes, true, type)}]." }
                     name = "dot"
                     isInfix = true
                     returnType = type.backingType.display
@@ -127,7 +127,7 @@ fun generateMath(output: OutputStream, type: MathType) {
             if (type.components == MathType.Components.XYZ) {
                 similarTypes.forEach {
                     method {
-                        kdoc { "Returns the cross product of a [$type] and a [${it.workingName(similarTypes, true)}]" }
+                        kdoc { "Returns the cross product of a [$type] and a [${it.workingName(similarTypes, true)}]." }
                         name = "cross"
                         isInfix = true
                         returnType = type

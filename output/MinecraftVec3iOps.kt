@@ -157,28 +157,28 @@ public operator fun Vec3i.component3(): Int {
 }
 
 /**
- * Returns the dot product of a [Vec3i] and a [Vector3i]
+ * Returns the dot product of a [Vec3i] and a [Vector3i].
  */
 public infix fun Vec3i.dot(other: Vector3i): Int {
     return (this.x * other.x) + (this.y * other.y) + (this.z * other.z)
 }
 
 /**
- * Returns the dot product of a [Vec3i] and a [BlockPos]
+ * Returns the dot product of a [Vec3i] and a [BlockPos].
  */
 public infix fun Vec3i.dot(other: BlockPos): Int {
     return (this.x * other.x) + (this.y * other.y) + (this.z * other.z)
 }
 
 /**
- * Returns the dot product of a [Vec3i] and a [Vec3i]
+ * Returns the dot product of a [Vec3i] and a [Vec3i].
  */
 public infix fun Vec3i.dot(other: Vec3i): Int {
     return (this.x * other.x) + (this.y * other.y) + (this.z * other.z)
 }
 
 /**
- * Returns the cross product of a [Vec3i] and a [Vector3i]
+ * Returns the cross product of a [Vec3i] and a [Vector3i].
  */
 public infix fun Vec3i.cross(other: Vector3i): Vec3i {
     return Vec3i(
@@ -189,7 +189,7 @@ public infix fun Vec3i.cross(other: Vector3i): Vec3i {
 }
 
 /**
- * Returns the cross product of a [Vec3i] and a [BlockPos]
+ * Returns the cross product of a [Vec3i] and a [BlockPos].
  */
 public infix fun Vec3i.cross(other: BlockPos): Vec3i {
     return Vec3i(
@@ -200,7 +200,7 @@ public infix fun Vec3i.cross(other: BlockPos): Vec3i {
 }
 
 /**
- * Returns the cross product of a [Vec3i] and a [Vec3i]
+ * Returns the cross product of a [Vec3i] and a [Vec3i].
  */
 public infix fun Vec3i.cross(other: Vec3i): Vec3i {
     return Vec3i(
