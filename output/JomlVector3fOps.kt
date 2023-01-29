@@ -97,6 +97,10 @@ public infix fun Vector3f.dot(other: org.joml.Vector3f): Float {
  * Returns the cross product of a [Vector3f] and a [Vector3f]
  */
 public infix fun Vector3f.cross(other: Vector3f) {
-    
+    return Vector3f(
+        (this.y * other.z) - (this.z * other.y),
+        (this.z * other.x) - (this.x * other.z),
+        (this.x * other.y) - (this.y * other.x),
+    )
 }
 //endregion

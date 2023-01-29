@@ -141,14 +141,22 @@ public infix fun Vec3d.dot(other: net.minecraft.util.math.Vec3d): Double {
  * Returns the cross product of a [Vec3d] and a [Vector3d]
  */
 public infix fun Vec3d.cross(other: Vector3d) {
-    
+    return Vec3d(
+        (this.y * other.z) - (this.z * other.y),
+        (this.z * other.x) - (this.x * other.z),
+        (this.x * other.y) - (this.y * other.x),
+    )
 }
 
 /**
  * Returns the cross product of a [Vec3d] and a [Vec3d]
  */
 public infix fun Vec3d.cross(other: Vec3d) {
-    
+    return Vec3d(
+        (this.y * other.z) - (this.z * other.y),
+        (this.z * other.x) - (this.x * other.z),
+        (this.x * other.y) - (this.y * other.x),
+    )
 }
 //endregion
 

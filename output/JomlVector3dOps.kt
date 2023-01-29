@@ -141,14 +141,22 @@ public infix fun Vector3d.dot(other: org.joml.Vector3d): Double {
  * Returns the cross product of a [Vector3d] and a [Vec3d]
  */
 public infix fun Vector3d.cross(other: Vec3d) {
-    
+    return Vector3d(
+        (this.y * other.z) - (this.z * other.y),
+        (this.z * other.x) - (this.x * other.z),
+        (this.x * other.y) - (this.y * other.x),
+    )
 }
 
 /**
  * Returns the cross product of a [Vector3d] and a [Vector3d]
  */
 public infix fun Vector3d.cross(other: Vector3d) {
-    
+    return Vector3d(
+        (this.y * other.z) - (this.z * other.y),
+        (this.z * other.x) - (this.x * other.z),
+        (this.x * other.y) - (this.y * other.x),
+    )
 }
 //endregion
 

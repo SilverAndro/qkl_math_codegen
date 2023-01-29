@@ -125,6 +125,15 @@ fun generateMath(output: OutputStream, type: MathType) {
                         name = "cross"
                         isInfix = true
                         param("other", it.workingName(similarTypes, true))
+                        body {
+                            buildString {
+                                appendLine("return $type(")
+                                appendLine("    (this.${component(1)} * other.${component(2)}) - (this.${component(2)} * other.${component(1)}),")
+                                appendLine("    (this.${component(2)} * other.${component(0)}) - (this.${component(0)} * other.${component(2)}),")
+                                appendLine("    (this.${component(0)} * other.${component(1)}) - (this.${component(1)} * other.${component(0)}),")
+                                append(")")
+                            }
+                        }
                     }
                 }
             }
