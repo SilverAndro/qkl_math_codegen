@@ -3,6 +3,7 @@
 package org.quiltmc.qkl.library.math
 
 import org.joml.Vector2d
+import kotlin.math.sqrt
 
 //region Standard math operators
 /**
@@ -55,6 +56,17 @@ public operator fun Vector2d.div(other: Double): Vector2d {
     return Vector2d(
         this.x / other,
         this.y / other
+    )
+}
+
+/**
+ * Returns the normalized version of this vector
+ */
+public fun Vector2d.normalized(): Vector2d {
+    val length = sqrt((this.x * this.x) + (this.y * this.y))
+    return Vector2d(
+        this.x / length,
+        this.y / length
     )
 }
 

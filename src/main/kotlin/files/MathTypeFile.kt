@@ -4,8 +4,8 @@ import data.MathType
 import java.io.OutputStream
 
 class MathTypeFile(val baseType: MathType, action: MathTypeFile.()->Unit) {
-    val imports = mutableListOf<MathType>()
-    val sections = mutableListOf<MathTypeSection>()
+    private val imports = mutableListOf<String>()
+    private val sections = mutableListOf<MathTypeSection>()
 
     init {
         import(baseType)
@@ -13,7 +13,11 @@ class MathTypeFile(val baseType: MathType, action: MathTypeFile.()->Unit) {
     }
 
     fun import(import: MathType) {
-        imports.add(import)
+        imports.add(import.path)
+    }
+
+    fun import(import: Any) {
+        imports.add(import.toString())
     }
 
     fun section(sectionName: String, action: MathTypeFile.() -> Unit) {
@@ -36,7 +40,7 @@ class MathTypeFile(val baseType: MathType, action: MathTypeFile.()->Unit) {
             """.trimIndent())
 
             imports.forEach {
-                appendLine("import ${it.path}")
+                appendLine("import $it")
             }
             appendLine()
             sections.forEachIndexed { index, section ->

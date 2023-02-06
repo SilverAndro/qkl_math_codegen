@@ -5,6 +5,7 @@ package org.quiltmc.qkl.library.math
 import net.minecraft.util.math.BlockPos
 import org.joml.Vector3i
 import net.minecraft.util.math.Vec3i
+import kotlin.math.sqrt
 
 //region Standard math operators
 /**
@@ -132,6 +133,18 @@ public operator fun BlockPos.div(other: Int): BlockPos {
         this.x / other,
         this.y / other,
         this.z / other
+    )
+}
+
+/**
+ * Returns the normalized version of this vector
+ */
+public fun BlockPos.normalized(): BlockPos {
+    val length = sqrt((this.x * this.x) + (this.y * this.y) + (this.z * this.z).toDouble())
+    return BlockPos(
+        (this.x / length).toInt(),
+        (this.y / length).toInt(),
+        (this.z / length).toInt()
     )
 }
 

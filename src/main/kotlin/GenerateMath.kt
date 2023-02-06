@@ -93,6 +93,14 @@ fun generateMath(output: OutputStream, type: MathType) {
                 body { generateBackingDivision(type) }
             }
 
+            method {
+                import("kotlin.math.sqrt")
+                kdoc { "Returns the normalized version of this vector" }
+                name = "normalized"
+                returnType = type
+                body { generateNormalization(type) }
+            }
+
             repeat(type.components.count) {
                 method {
                     kdoc { "The [`${component(it)}`][$type.${component(it)}] of a [$type]." }
@@ -210,6 +218,36 @@ fun generateNegate(type: MathType): String {
             appendLine(
                 "    -this.${component(it)}" + if (it != type.components.count - 1) "," else ""
             )
+        }
+        append(")")
+    }
+}
+
+fun generateNormalization(type: MathType): String {
+    return buildString {
+        append("val length = sqrt(")
+        repeat(type.components.count) {
+            append("(this.${component(it)} * this.${component(it)})")
+            if (it != type.components.count - 1) {
+                append(" + ")
+            }
+        }
+        if (type.backingType != MathType.BackingType.DOUBLE) {
+            append(MathType.BackingType.DOUBLE.conversion)
+        }
+        appendLine(")")
+
+        appendLine("return $type(")
+        repeat(type.components.count) {
+            if (type.backingType != MathType.BackingType.DOUBLE) {
+                appendLine(
+                    "    (this.${component(it)} / length)${type.backingType.conversion}" + if (it != type.components.count - 1) "," else ""
+                )
+            } else {
+                appendLine(
+                    "    this.${component(it)} / length" + if (it != type.components.count - 1) "," else ""
+                )
+            }
         }
         append(")")
     }
