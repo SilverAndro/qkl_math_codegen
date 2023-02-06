@@ -126,17 +126,6 @@ public operator fun Vector3i.times(other: BlockPos): Vector3i {
 
 //region Vector specific operators
 /**
- * Divides a [Vector3i] and an Int.
- */
-public operator fun Vector3i.div(other: Int): Vector3i {
-    return Vector3i(
-        this.x / other,
-        this.y / other,
-        this.z / other
-    )
-}
-
-/**
  * Returns the normalized version of this vector
  */
 public fun Vector3i.normalized(): Vector3i {

@@ -54,17 +54,6 @@ public operator fun Vector3f.unaryMinus(): Vector3f {
 
 //region Vector specific operators
 /**
- * Divides a [Vector3f] and a Float.
- */
-public operator fun Vector3f.div(other: Float): Vector3f {
-    return Vector3f(
-        this.x / other,
-        this.y / other,
-        this.z / other
-    )
-}
-
-/**
  * Returns the normalized version of this vector
  */
 public fun Vector3f.normalized(): Vector3f {

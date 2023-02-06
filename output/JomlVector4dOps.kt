@@ -58,18 +58,6 @@ public operator fun Vector4d.unaryMinus(): Vector4d {
 
 //region Vector specific operators
 /**
- * Divides a [Vector4d] and a Double.
- */
-public operator fun Vector4d.div(other: Double): Vector4d {
-    return Vector4d(
-        this.x / other,
-        this.y / other,
-        this.z / other,
-        this.w / other
-    )
-}
-
-/**
  * Returns the normalized version of this vector
  */
 public fun Vector4d.normalized(): Vector4d {

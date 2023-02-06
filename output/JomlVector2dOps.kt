@@ -50,16 +50,6 @@ public operator fun Vector2d.unaryMinus(): Vector2d {
 
 //region Vector specific operators
 /**
- * Divides a [Vector2d] and a Double.
- */
-public operator fun Vector2d.div(other: Double): Vector2d {
-    return Vector2d(
-        this.x / other,
-        this.y / other
-    )
-}
-
-/**
  * Returns the normalized version of this vector
  */
 public fun Vector2d.normalized(): Vector2d {

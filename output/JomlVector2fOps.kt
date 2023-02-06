@@ -115,16 +115,6 @@ public operator fun Vector2f.times(other: net.minecraft.client.util.math.Vector2
 
 //region Vector specific operators
 /**
- * Divides a [Vector2f] and a Float.
- */
-public operator fun Vector2f.div(other: Float): Vector2f {
-    return Vector2f(
-        this.x / other,
-        this.y / other
-    )
-}
-
-/**
  * Returns the normalized version of this vector
  */
 public fun Vector2f.normalized(): Vector2f {

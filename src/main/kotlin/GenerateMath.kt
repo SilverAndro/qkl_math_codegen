@@ -84,13 +84,15 @@ fun generateMath(output: OutputStream, type: MathType) {
         }
 
         section("Vector specific operators") {
-            method {
-                kdoc { "Divides a [$type] and ${type.backingType.prefix} ${type.backingType.display}." }
-                name = "div"
-                isOperator = true
-                returnType = type
-                param("other", type.backingType.display)
-                body { generateBackingDivision(type) }
+            if (type.fallbackPrefix != "Joml") {
+                method {
+                    kdoc { "Divides a [$type] and ${type.backingType.prefix} ${type.backingType.display}." }
+                    name = "div"
+                    isOperator = true
+                    returnType = type
+                    param("other", type.backingType.display)
+                    body { generateBackingDivision(type) }
+                }
             }
 
             method {
