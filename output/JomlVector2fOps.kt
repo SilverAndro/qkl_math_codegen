@@ -115,7 +115,7 @@ public operator fun Vector2f.times(other: net.minecraft.client.util.math.Vector2
 
 //region Vector specific operators
 /**
- * Returns the normalized version of this vector
+ * Returns the normalized version of this vector.
  */
 public fun Vector2f.normalized(): Vector2f {
     val length = sqrt((this.x * this.x) + (this.y * this.y).toDouble())

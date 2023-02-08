@@ -54,7 +54,7 @@ public operator fun Vector3f.unaryMinus(): Vector3f {
 
 //region Vector specific operators
 /**
- * Returns the normalized version of this vector
+ * Returns the normalized version of this vector.
  */
 public fun Vector3f.normalized(): Vector3f {
     val length = sqrt((this.x * this.x) + (this.y * this.y) + (this.z * this.z).toDouble())

@@ -91,7 +91,7 @@ public operator fun Vector3d.times(other: Vec3d): Vector3d {
 
 //region Vector specific operators
 /**
- * Returns the normalized version of this vector
+ * Returns the normalized version of this vector.
  */
 public fun Vector3d.normalized(): Vector3d {
     val length = sqrt((this.x * this.x) + (this.y * this.y) + (this.z * this.z))

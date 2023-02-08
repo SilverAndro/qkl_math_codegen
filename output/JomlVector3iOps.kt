@@ -126,7 +126,7 @@ public operator fun Vector3i.times(other: BlockPos): Vector3i {
 
 //region Vector specific operators
 /**
- * Returns the normalized version of this vector
+ * Returns the normalized version of this vector.
  */
 public fun Vector3i.normalized(): Vector3i {
     val length = sqrt((this.x * this.x) + (this.y * this.y) + (this.z * this.z).toDouble())

@@ -137,7 +137,7 @@ public operator fun BlockPos.div(other: Int): BlockPos {
 }
 
 /**
- * Returns the normalized version of this vector
+ * Returns the normalized version of this vector.
  */
 public fun BlockPos.normalized(): BlockPos {
     val length = sqrt((this.x * this.x) + (this.y * this.y) + (this.z * this.z).toDouble())

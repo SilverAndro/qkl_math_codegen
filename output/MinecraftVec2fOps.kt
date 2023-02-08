@@ -124,7 +124,7 @@ public operator fun Vec2f.div(other: Float): Vec2f {
 }
 
 /**
- * Returns the normalized version of this vector
+ * Returns the normalized version of this vector.
  */
 public fun Vec2f.normalized(): Vec2f {
     val length = sqrt((this.x * this.x) + (this.y * this.y).toDouble())

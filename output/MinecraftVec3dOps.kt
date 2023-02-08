@@ -102,7 +102,7 @@ public operator fun Vec3d.div(other: Double): Vec3d {
 }
 
 /**
- * Returns the normalized version of this vector
+ * Returns the normalized version of this vector.
  */
 public fun Vec3d.normalized(): Vec3d {
     val length = sqrt((this.x * this.x) + (this.y * this.y) + (this.z * this.z))

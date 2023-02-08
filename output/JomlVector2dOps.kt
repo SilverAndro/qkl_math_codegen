@@ -50,7 +50,7 @@ public operator fun Vector2d.unaryMinus(): Vector2d {
 
 //region Vector specific operators
 /**
- * Returns the normalized version of this vector
+ * Returns the normalized version of this vector.
  */
 public fun Vector2d.normalized(): Vector2d {
     val length = sqrt((this.x * this.x) + (this.y * this.y))

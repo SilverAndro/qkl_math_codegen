@@ -97,7 +97,7 @@ fun generateMath(output: OutputStream, type: MathType) {
 
             method {
                 import("kotlin.math.sqrt")
-                kdoc { "Returns the normalized version of this vector" }
+                kdoc { "Returns the normalized version of this vector." }
                 name = "normalized"
                 returnType = type
                 body { generateNormalization(type) }
